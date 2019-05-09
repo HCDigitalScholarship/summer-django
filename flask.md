@@ -23,3 +23,13 @@ for i in range(1,52):
             courses[id]['url'] = 'https://www.haverford.edu/' + url
 
 ```
+
+```python
+
+for course in courses:
+    url = courses[course]['url']
+    page = requests.get(url)
+    soup = BeautifulSoup(page.text, 'html.parser')
+    course_table = soup.tbody
+    
+    
