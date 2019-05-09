@@ -12,7 +12,6 @@ for i in range(1,52):
     soup = BeautifulSoup(page.text, 'html.parser')
     course_table = soup.tbody  #This selects all of the content between the <tbody> </tbody> tags
     links = course_table.find_all('a', href=True)
-
     #First, let's create a dictionary for each of the classes using the registration id.  We will also record the URL for the class record.
     for link in links:
         if 'mailto' in link['href']:
