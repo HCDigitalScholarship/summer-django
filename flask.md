@@ -30,6 +30,17 @@ for course in courses:
     url = courses[course]['url']
     page = requests.get(url)
     soup = BeautifulSoup(page.text, 'html.parser')
-    course_table = soup.tbody
+    courses[course]['campus'] = soup.find("td", text="Campus").find_next_sibling("td").text
+    courses[course]['semester'] = soup.find("td", text="Semester").find_next_sibling("td").text
+    courses[course]['title'] = soup.find("td", text="Course Title").find_next_sibling("td").text
+    courses[course]['credit'] = soup.find("td", text="Credit").find_next_sibling("td").text
+    courses[course]['department'] = soup.find("td", text="Department").find_next_sibling("td").text
+    courses[course]['instructor'] = soup.find("td", text="Instructor").find_next_sibling("td").text
+    courses[course]['times'] = soup.find("td", text="Times and Days").find_next_sibling("td").text
+    courses[course]['room'] = soup.find("td", text="Room Location").find_next_sibling("td").text
+    courses[course]['additional_info'] = soup.find("td", text="Additional Course Info").find_next_sibling("td").text
+    courses[course]['misc_links'] = soup.find("td", text="Miscellaneous Links").find_next_sibling("td").text
+
+ 
     
     
