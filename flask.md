@@ -20,6 +20,6 @@ for i in range(1,52):
             id = link.text
             url = link['href']
             courses[id] = {}
-            courses[id]['url'] = url
+            courses[id]['url'] = 'https://www.haverford.edu/' + url
 
 ```
