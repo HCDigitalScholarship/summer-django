@@ -25,8 +25,8 @@ for i in range(1,52):
 ```
 
 ```python
-
-for course in courses:
+import tqdm
+for course in tqdm(courses):
     url = courses[course]['url']
     page = requests.get(url)
     soup = BeautifulSoup(page.text, 'html.parser')
