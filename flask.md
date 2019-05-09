@@ -11,8 +11,15 @@ page = requests.get('https://www.haverford.edu/academics/results?semester%5B0%5D
 soup = BeautifulSoup(page.text, 'html.parser')
 courses = soup.tbody  #This selects all of the content between the <tbody> </tbody> tags
 links = courses.find_all('a')
+
+#First, let's create a dictionary for each of the classes using the registration id.  We will also record the URL for the class record.
 for link in links:
-    title = link.text
-    url = link['href']
+    if 'mailto' in link['href']:
+        pass
+    else:
+        id = link.text
+        url = link['href']
+        courses[str(id)] = {}
+        courses[str(id)]['url'] = url
 
 ```
