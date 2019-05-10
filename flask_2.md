@@ -78,3 +78,36 @@ def index():
 if __name__ == "__main__":
     app.run()
 ```
+We can now serve content from our csv file to the web.  Without any styling, it's really ugly.  Let's add some HTML and CSS to make this look better.
+
+**index.html**
+```
+<!DOCTYPE>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"
+        
+    </head>
+    <body>
+        <div class="container">
+            {{ course_info }} 
+        </div>
+    </body>
+</html>
+```
+**main.css**
+```css
+.container {
+    background: #f4f4f4;
+    margin: 4em auto;
+    padding: 0.83m;
+    width: 50em;
+    border: 5px solid #000;
+}
+
+.flash, .error {
+    background: #000;
+    color: #fff;
+    padding: 0.4em;
+}
+```
