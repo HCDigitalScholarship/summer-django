@@ -1,7 +1,10 @@
 This is a page for the section on creating and deploying a Flask app to the web 
 
 
-Let's get some data for our app.  I going to fetch course information from the Haverford Registrar's [courses page](https://www.haverford.edu/academics/courses).  I'm going to get the url for a full search of every class offered at Haverford, Swarthmore and Bryn Mawr this coming fall. Looking at the results page, I can see a few important things:
+Let's get some data for our app.  I going to fetch course information from the Haverford Registrar's [courses page](https://www.haverford.edu/academics/courses).  I'm going to get the url for a full search of every class offered at Haverford, Swarthmore and Bryn Mawr this coming fall.   
+![](https://github.com/HCDigitalScholarship/summer-django/raw/master/individual_page.png)  
+
+Looking at the results page, I can see a few important things:
 `https://www.haverford.edu/academics/results?semester%5B0%5D=fall_2019&college%5B0%5D=bryn_mawr&college%5B1%5D=haverford&college%5B2%5D=swarthmore&page=1&per_page=50`  
 Notice the `&page=1` in the URL.  I can change that and I'll get the second page of results. If you right click and view the page source, you can see that all of the information I'd want is contained in the table <tbody></tbody> tags.  Using a Python library called [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/), I can parse the HTML to get the information that we want. I'll use the requests library to fetch the HTML from the web.  Note that there are 51 pages of results. `range(1,52)` move through each page of search results and scrape the results.  You'd need to update that value for a different search.  
 
@@ -28,6 +31,7 @@ for i in range(1,52):
 ```
 
 Now that we have a dictionary of course ids and their urls, I can visit each individual course page to fetch the data.  
+![](https://github.com/HCDigitalScholarship/summer-django/raw/master/search-results.png)  
 
 ```python
 for course in courses:
