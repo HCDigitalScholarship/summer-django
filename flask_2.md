@@ -85,33 +85,43 @@ We can now serve content from our csv file to the web.  Without any styling, it'
 <!DOCTYPE>
 <html>
     <head>
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"
-        
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" 
     </head>
     <body>
-        <div class="container">
-            {{ course_info }} 
-        </div>
+        
+        	<table style="width:100%">
+        		
+        		  {{ course_info|safe }}
+        		 
+        		</table>
+            
+        
     </body>
 </html>
+
 ```
 **main.css**
 ```css
-.container {
-    background: #f4f4f4;
-    margin: 4em auto;
-    padding: 0.83m;
-    width: 50em;
-    border: 5px solid #000;
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
 }
 
-.flash, .error {
-    background: #000;
-    color: #fff;
-    padding: 0.4em;
+td, th {
+  border: 5px solid #AA9CFC;
+  text-align: left;
+  padding: 12px;
+}
+
+tr {
+  background-color: #FC9CE7;
 }
 ```
-We'll need to make a few small changes to the application so that we're rendering the HTML template and not just sending text to the browser. Change the line `return text` to:
+We'll need to make a few small changes to the application so that we're rendering the HTML template and not just sending text to the browser. Change the app to the following:
 ```python
+info = ""
+for i in random_course:
+    info += "<tr>" + "<th>"+ i +"</th>" + "<td>" + random_course[i] + "</td>" + "</tr>"
 return render_template('index.html', course_info=info)
-```
+        ```
