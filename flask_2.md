@@ -78,25 +78,37 @@ def index():
 if __name__ == "__main__":
     app.run()
 ```
-We can now serve content from our csv file to the web.  Without any styling, it's really ugly.  Let's add some HTML and CSS to make this look better.  First, create an index.html file in a new `templates` directory (`mkdir templates`).  Second, create `static/css`. 
+We can now serve content from our csv file to the web.  Without any styling, it's really ugly.  Let's add some HTML and CSS to make this look better.   
+
+We'll need to make a few small changes to the application so that we're rendering an HTML template and not just sending text to the browser. Change the app to the following:
+
+```python
+info = ""
+for i in random_course:
+    info += "<tr>" + "<th>"+ i +"</th>" + "<td>" + random_course[i] + "</td>" + "</tr>"
+return render_template('index.html', course_info=info)
+```
+
+Create an index.html file in a new `templates` directory (`mkdir templates`).  Second, create `static/css/main.css`. 
 
 **/templates/index.html**
 ```HTML
 <!DOCTYPE>
 <html>
-    <head>
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" 
-    </head>
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" </head>
+
     <body>
-        
-        	<table style="width:100%">
-        		
-        		  {{ course_info|safe }}
-        		 
-        		</table>
-            
-        
+
+        <table style="width:100%">
+
+            {{ course_info|safe }}
+
+        </table>
+
     </body>
+
 </html>
 
 ```
@@ -118,10 +130,3 @@ tr {
   background-color: #FC9CE7;
 }
 ```
-We'll need to make a few small changes to the application so that we're rendering the HTML template and not just sending text to the browser. Change the app to the following:
-```python
-info = ""
-for i in random_course:
-    info += "<tr>" + "<th>"+ i +"</th>" + "<td>" + random_course[i] + "</td>" + "</tr>"
-return render_template('index.html', course_info=info)
-        ```
