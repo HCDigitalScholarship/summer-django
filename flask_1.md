@@ -2,7 +2,7 @@ This is a page for the section on creating and deploying a Flask app to the web
 
 
 Let's get some data for our app.  I going to fetch course information from the Haverford Registrar's [courses page](https://www.haverford.edu/academics/courses).  I'm going to get the url for a full search of every class offered at Haverford, Swarthmore and Bryn Mawr this coming fall.   
-![](https://github.com/HCDigitalScholarship/summer-django/raw/master/individual_page.png)  
+![](https://github.com/HCDigitalScholarship/summer-django/raw/master/search-results.png)  
 
 Looking at the results page, I can see a few important things:
 `https://www.haverford.edu/academics/results?semester%5B0%5D=fall_2019&college%5B0%5D=bryn_mawr&college%5B1%5D=haverford&college%5B2%5D=swarthmore&page=1&per_page=50`  
@@ -31,8 +31,7 @@ for i in range(1,52):
 ```
 
 Now that we have a dictionary of course ids and their urls, I can visit each individual course page to fetch the data.  
-![](https://github.com/HCDigitalScholarship/summer-django/raw/master/search-results.png)  
-
+![](https://github.com/HCDigitalScholarship/summer-django/raw/master/individual_page.png)
 ```python
 for course in courses:
     url = courses[course]['url']
