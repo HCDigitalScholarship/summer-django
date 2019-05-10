@@ -68,5 +68,5 @@ with open('courses.csv','w') as f:
 ```
 Please feel free to try and adapt the code above.  You can also download the [csv here](https://github.com/HCDigitalScholarship/summer-django/raw/master/courses.csv) or the [pickle file](https://github.com/HCDigitalScholarship/summer-django/raw/master/courses.pickle).
 
-    
+[continue...](https://github.com/HCDigitalScholarship/summer-django/blob/master/flask_2.md)
     
