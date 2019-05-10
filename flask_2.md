@@ -130,3 +130,7 @@ tr {
   background-color: #FC9CE7;
 }
 ```
+
+The cycle of life is complete.  You've taken data from the web and can now serve it back to your browser. In the next section, we discuss how to deploy your application using sites.haverford.edu. 
+
+[continue...]()
