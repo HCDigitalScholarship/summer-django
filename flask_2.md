@@ -78,9 +78,9 @@ def index():
 if __name__ == "__main__":
     app.run()
 ```
-We can now serve content from our csv file to the web.  Without any styling, it's really ugly.  Let's add some HTML and CSS to make this look better.
+We can now serve content from our csv file to the web.  Without any styling, it's really ugly.  Let's add some HTML and CSS to make this look better.  First, create an index.html file in a new `templates` directory (`mkdir templates`).  Second, create `static/css`. 
 
-**index.html**
+**/templates/index.html**
 ```
 <!DOCTYPE>
 <html>
