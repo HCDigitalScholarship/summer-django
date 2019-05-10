@@ -111,3 +111,7 @@ We can now serve content from our csv file to the web.  Without any styling, it'
     padding: 0.4em;
 }
 ```
+We'll need to make a few small changes to the application so that we're rendering the HTML template and not just sending text to the browser. Change the line `return text` to:
+```python
+return render_template('index.html', course_info=info)
+```
