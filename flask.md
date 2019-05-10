@@ -47,7 +47,21 @@ for course in courses:
 ```
 This can take some time and saves the results in memory. To save the `courses` dictionary, we can either save it as a binary pickle or a csv.  
 
+```python
+import pickle
+pickle.dump(courses, open("courses.pickle", "wb" ))
+```
+or 
 
- 
+```python
+import csv
+with open('courses.csv','w') as f:
+    field_names = ["campus","semester","title","credit","department","instructor","times","room","additional_info","misc_links"]
+    writer = csv.DictWriter(f, field_names)
+    writer.writeheader()
+    for course in courses:
+        row = courses[course]
+        writer.writerow(row)
+```
     
     
