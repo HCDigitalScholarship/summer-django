@@ -53,7 +53,7 @@ createServer()
 Flask is one of the simplest Python web frameworks available and has a lot in common with Django.
 
 
-
+**app.py**
 ```python
 import csv
 import random
@@ -78,6 +78,8 @@ def index():
 if __name__ == "__main__":
     app.run()
 ```
+In the terminal run `$ python app.py`
+
 We can now serve content from our csv file to the web.  Without any styling, it's really ugly.  Let's add some HTML and CSS to make this look better.   
 
 We'll need to make a few small changes to the application so that we're rendering an HTML template and not just sending text to the browser. Change the app to the following:
