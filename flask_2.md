@@ -112,7 +112,7 @@ Create an index.html file in a new `templates` directory (`mkdir templates`).  S
 </html>
 
 ```
-**main.css**
+**/static/css/main.css**
 ```css
 table {
   font-family: arial, sans-serif;
@@ -131,7 +131,9 @@ tr {
 }
 ```
 
-![](https://github.com/HCDigitalScholarship/summer-django/raw/master/pink_course.png)
+*your page should look something like this*  
+![](https://github.com/HCDigitalScholarship/summer-django/raw/master/pink_course.png) 
+
 The cycle of life is complete.  You've taken data from the web and can now serve it back to your browser. In the next section, we discuss how to deploy your application using sites.haverford.edu. 
 
-[continue...]()
+[continue...](https://github.com/HCDigitalScholarship/summer-django/blob/master/flask_3.md)
