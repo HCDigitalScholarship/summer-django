@@ -56,7 +56,7 @@ or
 ```python
 import csv
 with open('courses.csv','w') as f:
-    field_names = ["campus","semester","title","credit","department","instructor","times","room","additional_info","misc_links"]
+    field_names = ["url","campus","semester","title","credit","department","instructor","times","room","additional_info","misc_links"]
     writer = csv.DictWriter(f, field_names)
     writer.writeheader()
     for course in courses:
