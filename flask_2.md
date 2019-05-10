@@ -57,7 +57,7 @@ Flask is one of the simplest Python web frameworks available and has a lot in co
 ```python
 import csv
 import random
-from flask import Flask
+from flask import Flask, render_template
 
 
 app = Flask(__name__)
