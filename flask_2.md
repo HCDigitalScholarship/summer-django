@@ -51,7 +51,23 @@ createServer()
 
 
 Flask is one of the simplest Python web frameworks available and has a lot in common with Django.
+Create a new folder called `flask_app`.
+- Create app.py in the `flask_app` directory
+- Download courses.csv to the `flask_app` directory
+- create a subfolder templates for our index.html file
+- create a static and css subfolders with our main.css file
 
+```
+flask_app
+    ├── .env
+    ├── .flaskenv
+    ├── app.py
+    ├── requirements.txt
+    ├── static
+    │   └── main.css
+    └── templates
+        └── index.html
+```
 
 **app.py**
 ```python
@@ -99,7 +115,7 @@ Create an index.html file in a new `templates` directory (`mkdir templates`).  S
 <html>
 
 <head>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" 
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" 
     <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
 </head>
 
