@@ -115,7 +115,6 @@ Create an index.html file in a new `templates` directory (`mkdir templates`).  S
 
 <head>
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" 
-    <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
 </head>
 
     <body>
@@ -131,15 +130,17 @@ Create an index.html file in a new `templates` directory (`mkdir templates`).  S
 </html>
 
 ```
-**/static/css/main.css**
+**/static/main.css**
 ```css
+@import url('https://fonts.googleapis.com/css?family=Cinzel');
+
 table {
-  font-family: 'Cinzel', serif;
   border-collapse: collapse;
   width: 80%;
 }
 
 td, th {
+  font-family: 'Cinzel', serif;
   border: 5px solid #FC9CE7;
   text-align: left;
   padding: 12px;
