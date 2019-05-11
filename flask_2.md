@@ -61,6 +61,7 @@ In the next few steps, we're going to:
 ```
 flask_app
     ├── app.py
+    ├── courses.csv
     ├── static
     │   └── main.css
     └── templates
