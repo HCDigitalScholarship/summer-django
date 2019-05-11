@@ -141,14 +141,15 @@ table {
 
 td, th {
   font-family: 'Cinzel', serif;
-  border: 5px solid #FC9CE7;
+  border: 1px solid #4C061D;
   text-align: left;
   padding: 12px;
 }
 
 tr {
-  background-color: #AA9CFC;
+  background-color: #ffffff;
 }
+
 ```
 
 *your page should look something like this*  
