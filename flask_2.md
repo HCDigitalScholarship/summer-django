@@ -49,19 +49,18 @@ print('Access http://localhost:9000')
 createServer()
 ```
 
-
+## Flask 
 Flask is one of the simplest Python web frameworks available and has a lot in common with Django.
-Create a new folder called `flask_app`.
+In the next few steps, we're going to: 
+- Create a new folder called `flask_app`
 - Create app.py in the `flask_app` directory
 - Download [courses.csv](https://github.com/HCDigitalScholarship/summer-django/raw/master/courses.csv) to the `flask_app` directory
-- create a subfolder templates for our index.html file
+- create a templates subfolder  for our index.html file
 - create a static subfolder for our main.css file
 
 ```
 flask_app
-    ├── .env
     ├── app.py
-    ├── requirements.txt
     ├── static
     │   └── main.css
     └── templates
@@ -94,8 +93,9 @@ if __name__ == "__main__":
     app.run()
 ```
 In the terminal run `$ python app.py`
+> You'll get an error if you haven't installed Flask.  Just use `pip install flask`.  In the future we'll use virtual enviornments. 
 
-We can now serve content from our csv file to the web.  Without any styling, it's really ugly.  Let's add some HTML and CSS to make this look better.   
+We can now serve content from our csv file to the web.  Without any styling it's really ugly.  Let's add some HTML and CSS to make this look better.   
 
 We'll need to make a few small changes to the application so that we're rendering an HTML template and not just sending text to the browser. Change the app to the following:
 
@@ -106,9 +106,9 @@ for i in random_course:
 return render_template('index.html', course_info=info)
 ```
 
-Create an index.html file in a new `templates` directory (`mkdir templates`).  Second, create `static/css/main.css`. 
+Create an index.html file in a new `templates` directory (`mkdir templates`).  Second, create `static/main.css`. 
 
-**/templates/index.html**
+**./templates/index.html**
 ```HTML
 <!DOCTYPE>
 <html>
@@ -130,7 +130,7 @@ Create an index.html file in a new `templates` directory (`mkdir templates`).  S
 </html>
 
 ```
-**/static/main.css**
+**./static/main.css**
 ```css
 @import url('https://fonts.googleapis.com/css?family=Cinzel');
 
@@ -151,7 +151,7 @@ tr {
 }
 
 ```
-> Note the `@import url()`. This comes from [Google Fonts](https://fonts.google.com/).  You can use any of their thousands of multi- lingual fonts, just by adding this import to your css.  For example, `@import url('https://fonts.googleapis.com/css?family=Roboto');` and then `font-family: 'Roboto', sans-serif;`
+> Note the `@import url()`. This comes from [Google Fonts](https://fonts.google.com/).  You can use any of their thousands of multi-lingual fonts, just by adding this import to your css.  For example, `@import url('https://fonts.googleapis.com/css?family=Roboto');` and then `font-family: 'Roboto', sans-serif;`
 
 
 *your page should look something like this*  
