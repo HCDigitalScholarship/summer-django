@@ -155,7 +155,7 @@ tr {
 
 
 *your page should look something like this*  
-![](https://github.com/HCDigitalScholarship/summer-django/raw/master/pink_course.png) 
+![](https://github.com/HCDigitalScholarship/summer-django/raw/master/flask_demo.png) 
 
 The cycle of life is complete.  You've taken data from the web and can now serve it back to your browser. In the next section, we discuss how to deploy your application using sites.haverford.edu. 
 
