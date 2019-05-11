@@ -158,6 +158,6 @@ tr {
 *your page should look something like this*  
 ![](https://github.com/HCDigitalScholarship/summer-django/raw/master/flask_demo.png) 
 
-The cycle of life is complete.  You've taken data from the web and can now serve it back to your browser. In the next section, we discuss how to deploy your application using sites.haverford.edu. 
+The cycle of life is complete.  You've taken data from the web and can now serve it back to your browser. More importantly, you can transform that information using Python.  You can sort classes by timeslot and create a schedule builder and integrates with Google Calendar. It's all up to you. In the next section, we discuss how to deploy your application using sites.haverford.edu. 
 
 [continue...](https://github.com/HCDigitalScholarship/summer-django/blob/master/flask_3.md)
