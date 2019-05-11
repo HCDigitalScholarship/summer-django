@@ -151,6 +151,8 @@ tr {
 }
 
 ```
+> Note the `@import url()`. This comes from [Google Fonts](https://fonts.google.com/).  You can use any of their thousands of multi- lingual fonts, just by adding this import to your css.  For example, `@import url('https://fonts.googleapis.com/css?family=Roboto');` and then `font-family: 'Roboto', sans-serif;`
+
 
 *your page should look something like this*  
 ![](https://github.com/HCDigitalScholarship/summer-django/raw/master/pink_course.png) 
