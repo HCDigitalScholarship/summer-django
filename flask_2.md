@@ -99,7 +99,9 @@ Create an index.html file in a new `templates` directory (`mkdir templates`).  S
 <html>
 
 <head>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" </head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" 
+    <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+</head>
 
     <body>
 
@@ -117,7 +119,7 @@ Create an index.html file in a new `templates` directory (`mkdir templates`).  S
 **/static/css/main.css**
 ```css
 table {
-  font-family: arial, sans-serif;
+  font-family: 'Cinzel', serif;
   border-collapse: collapse;
   width: 80%;
 }
