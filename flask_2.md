@@ -123,13 +123,13 @@ table {
 }
 
 td, th {
-  border: 5px solid #AA9CFC;
+  border: 5px solid #FC9CE7;
   text-align: left;
   padding: 12px;
 }
 
 tr {
-  background-color: #FC9CE7;
+  background-color: #AA9CFC;
 }
 ```
 
