@@ -4,15 +4,20 @@ title: Flask, Part I
 nav_order: 1
 ---
 
-This is a page for the section on creating and deploying a Flask app to the web 
+## Python Web Applications  
 
+In this section, we will create and deploy a Python app to the web. 
 
-Let's get some data for our app.  I going to fetch course information from the Haverford Registrar's [courses page](https://www.haverford.edu/academics/courses).  I'm going to get the url for a full search of every class offered at Haverford, Swarthmore and Bryn Mawr this coming fall.   
+To get started, let's get some data for our app.  I going to fetch course information from the Haverford Registrar's [courses page](https://www.haverford.edu/academics/courses).  I'm going to get the url for a full search of every class offered at Haverford, Swarthmore and Bryn Mawr this coming Fall.   
 ![](https://github.com/HCDigitalScholarship/summer-django/raw/master/search-results.png)  
 
-Looking at the results page, I can see a few important things:
-`https://www.haverford.edu/academics/results?semester%5B0%5D=fall_2019&college%5B0%5D=bryn_mawr&college%5B1%5D=haverford&college%5B2%5D=swarthmore&page=1&per_page=50`  
-Notice the `&page=1` in the URL.  I can change that and I'll get the second page of results. If you right click and view the page source, you can see that all of the information I'd want is contained in the table <tbody></tbody> tags.  Using a Python library called [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/), I can parse the HTML to get the information that we want. I'll use the requests library to fetch the HTML from the web.  Note that there are 51 pages of results. `range(1,52)` move through each page of search results and scrape the results.  You'd need to update that value for a different search.  
+Looking at the results page, I can see a few important things:  
+
+`https://www.haverford.edu/academics/results?semester%5B0%5D=fall_2019&college%5B0%5D=bryn_mawr&college%5B1%5D=haverford&college%5B2%5D=swarthmore&page=1&per_page=50`    
+
+- Notice the `&page=1` in the URL.  I can change that and I'll get the second page of results.  
+- If you right click and view the page source, you can see that all of the information I'd want is contained in the table <tbody></tbody> tags.  Using a Python library called [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/), I can parse the HTML to get the information that we want.
+- I'll use the requests library to fetch the HTML from the web.  Note that there are 51 pages of results. `range(1,52)` move through each page of search results and scrape the results.  You'd need to update that value for a different search.  
 
 ```python 
 import requests
@@ -37,7 +42,8 @@ for i in range(1,52):
 ```
 
 Now that we have a dictionary of course ids and their urls, I can visit each individual course page to fetch the data.  
-![](https://github.com/HCDigitalScholarship/summer-django/raw/master/individual_page.png)
+![](https://github.com/HCDigitalScholarship/summer-django/raw/master/individual_page.png) 
+
 ```python
 for course in courses:
     url = courses[course]['url']
@@ -54,7 +60,7 @@ for course in courses:
     courses[course]['additional_info'] = soup.find("td", text="Additional Course Info").find_next_sibling("td").text
     courses[course]['misc_links'] = soup.find("td", text="Miscellaneous Links").find_next_sibling("td").text
 ```
-This can take some time and saves the results in memory. To save the `courses` dictionary, we can either save it as a binary pickle or a csv.  
+This can take some time and saves all of your data into memory so be careful with large datasets. To save the `courses` dictionary, we can either save it as a binary pickle or a csv.  
 
 ```python
 import pickle
@@ -69,10 +75,9 @@ with open('courses.csv','w') as f:
     writer = csv.DictWriter(f, field_names)
     writer.writeheader()
     for course in courses:
-        row = courses[course]
-        writer.writerow(row)
+        writer.writerow(courses[course])
 ```
 Please feel free to try and adapt the code above.  You can also download the [csv here](https://github.com/HCDigitalScholarship/summer-django/raw/master/courses.csv) or the [pickle file](https://github.com/HCDigitalScholarship/summer-django/raw/master/courses.pickle).
 
-[continue...](https://github.com/HCDigitalScholarship/summer-django/blob/master/flask_2.md)
+[continue...](https://hcdigitalscholarship.github.io/summer-django/flask_2.html)
     
