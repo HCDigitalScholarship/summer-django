@@ -175,6 +175,7 @@ def by_subject(department):
         for row in reader:
             if department in row['department']:
                 for i in row:
-                    info += "<tr>" + "<th>"+ i +"</th>" + "<td>" + random_course[i] + "</td>" + "</tr>"
+                    info += "<tr>" + "<th>"+ i +"</th>" + "<td>" + row[i] + "</td>" + "</tr>"
         return render_template('index.html', course_info=info)
 ```
+Click here to download the complete [app.py](https://github.com/HCDigitalScholarship/summer-django/raw/master/app.py)
