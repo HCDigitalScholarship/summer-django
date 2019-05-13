@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel');
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+}
+
+td, th {
+  font-family: 'Cinzel', serif;
+  border: 1px solid #4C061D;
+  text-align: left;
+  padding: 12px;
+}
+
+tr {
+  background-color: #ffffff;
+}
