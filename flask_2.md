@@ -161,3 +161,18 @@ tr {
 The cycle of life is complete.  You've taken data from the web and can now serve it back to your browser. More importantly, you can transform that information using Python.  You can sort classes by timeslot and create a schedule builder and integrates with Google Calendar. It's all up to you. In the next section, we discuss how to deploy your application using sites.haverford.edu. 
 
 [continue...](https://github.com/HCDigitalScholarship/summer-django/blob/master/flask_3.md)
+
+## Bonus
+
+One of the most useful features of dynamic web frameworks is the option to sort and organize data.  What if we wanted just classes in Physics?  You can add a new path that will take the subject from the URL in the browser and use that to filter your data. Just add the subject to your route and pass it as an argument to your view.  Django does this very elegantly, but I wanted to be sure you know that this is possible in Flask. 
+
+```python
+import pandas as pd
+
+@app.route('/<query>')
+def by_subject(query):
+    df = pd.from_csv('courses.csv')
+    result = df[df['department'].str.match(query)]
+    result = result.to_string(header=False, index=False, index_names=False).split('\n')
+    return result
+```
