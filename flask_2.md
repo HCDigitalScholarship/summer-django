@@ -171,8 +171,9 @@ import pandas as pd
 
 @app.route('/<department>')
 def by_subject(department):
-    df = pd.from_csv('courses.csv')
-    result = df[df['department'].str.match(department)]
-    result = result.to_string(header=False, index=False, index_names=False).split('\n')
-    return result
+    with open('courses.csv','r') as f:
+        reader = csv.DictReader(f) 
+            for row in reader:
+                if department in row['department']:
+            
 ```
