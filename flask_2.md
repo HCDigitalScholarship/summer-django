@@ -169,10 +169,10 @@ One of the most useful features of dynamic web frameworks is the option to sort 
 ```python
 import pandas as pd
 
-@app.route('/<query>')
-def by_subject(query):
+@app.route('/<department>')
+def by_subject(department):
     df = pd.from_csv('courses.csv')
-    result = df[df['department'].str.match(query)]
+    result = df[df['department'].str.match(department)]
     result = result.to_string(header=False, index=False, index_names=False).split('\n')
     return result
 ```
