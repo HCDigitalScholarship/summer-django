@@ -10,7 +10,7 @@ Welcome to Digital Scholarship.  In the following section, we're going to quickl
 To get started, let's get some data.  I going to fetch course information from the Haverford Registrar's [courses page](https://www.haverford.edu/academics/courses).  I'm going to get the url for a full search of every class offered at Haverford, Swarthmore and Bryn Mawr this coming Fall.   
 ![](https://github.com/HCDigitalScholarship/summer-django/raw/master/search-results.png)  
 
-Looking at the results page, I can see a few important things:  
+Looking at the results page URL, I can see a few important things:  
 
 `https://www.haverford.edu/academics/results?semester%5B0%5D=fall_2019&college%5B0%5D=bryn_mawr&college%5B1%5D=haverford&college%5B2%5D=swarthmore&page=1&per_page=50`    
 
