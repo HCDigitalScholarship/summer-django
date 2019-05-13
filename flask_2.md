@@ -1,4 +1,9 @@
-## Part II 
+---
+layout: default
+title: Flask, Part II
+nav_order: 2
+---
+
 
 Now that we have some data to work with, we can start working on a web application. We'll start by creating a simple "course of the day" application that will randomly pick a course from our dataset and display information in the browser.  Later, we're going to publish the application to the web using [sites.haverford.edu](sites.haverford.edu).  If time permits, we can try a more advanced chatbot following this [tutorial](https://pusher.com/tutorials/chatbot-flask-dialogflow).   
 
