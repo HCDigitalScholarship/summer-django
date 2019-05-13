@@ -167,13 +167,14 @@ The cycle of life is complete.  You've taken data from the web and can now serve
 One of the most useful features of dynamic web frameworks is the option to sort and organize data.  What if we wanted just classes in Physics?  You can add a new path that will take the subject from the URL in the browser and use that to filter your data. Just add the subject to your route and pass it as an argument to your view.  Django does this very elegantly, but I wanted to be sure you know that this is possible in Flask. 
 
 ```python
-import pandas as pd
-
 @app.route('/<department>')
 def by_subject(department):
     with open('courses.csv','r') as f:
         reader = csv.DictReader(f) 
-            for row in reader:
-                if department in row['department']:
-            
+        info = ""
+        for row in reader:
+            if department in row['department']:
+                for i in row:
+                    info += "<tr>" + "<th>"+ i +"</th>" + "<td>" + random_course[i] + "</td>" + "</tr>"
+        return render_template('index.html', course_info=info)
 ```
