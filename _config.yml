@@ -4,3 +4,5 @@ aux_links:
     "Haverford DS on GitHub":
       - "//github.com/HCDigitalScholarship/"
       
+
+theme: jekyll-theme-slate
