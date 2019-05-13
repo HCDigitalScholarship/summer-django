@@ -7,7 +7,8 @@ nav_order: 2
 
 Now that we have some data to work with, we can start working on a web application. We'll start by creating a simple "course of the day" application that will randomly pick a course from our dataset and display information in the browser.  Later, we're going to publish the application to the web using [sites.haverford.edu](sites.haverford.edu).  If time permits, we can try a more advanced chatbot following this [tutorial](https://pusher.com/tutorials/chatbot-flask-dialogflow).   
 
-While it's not common, you can write an application in pure Python.      
+While it's not common, you can write an application in pure Python.  You'll need this [courses.csv](https://github.com/HCDigitalScholarship/summer-django/raw/master/courses.csv) in your current directory. 
+> This example from from Dr. Chuck, who is a wonderful resource when improving your Python skills. [Python for Everybody](https://www.py4e.com/) is a free version of his world-famous Coursera and edX courses.  There is also a [Django for Everybody](https://www.dj4e.com/) course in the works
 
 ```python
 # https://docs.python.org/3/howto/sockets.html
@@ -65,11 +66,11 @@ In the next few steps, we're going to:
 
 ```
 flask_app
-    ├── app.py
+    ├── app.py  
     ├── courses.csv
-    ├── static
+    ├── static    # Home to all of your images, javascript and CSS
     │   └── main.css
-    └── templates
+    └── templates  # Home for all of your HTML templates
         └── index.html
 ```
 
@@ -81,10 +82,10 @@ from flask import Flask, render_template
 
 
 app = Flask(__name__)
-application = app
+application = app 
 
 
-@app.route("/")
+@app.route("/")   #This is the root URL. We can also create an absolute path @app.route("/about") or a relative one @app.route("/<user>")   
 def index():
     with open("courses.csv", "r") as f:
         reader = csv.DictReader(f)
@@ -98,44 +99,48 @@ def index():
 if __name__ == "__main__":
     app.run()
 ```
+
 In the terminal run `$ python app.py`
-> You'll get an error if you haven't installed Flask.  Just use `pip install flask`.  In the future we'll use virtual enviornments. 
+> You'll get an error if you haven't installed Flask.  Just use `pip install flask`.  In the future we'll use virtual enviornments. If you'd like to get started now, you can install [virtualenv](https://virtualenv.pypa.io/en/latest/) or [Anaconda](https://www.anaconda.com/).  Real Python has a great tutorial on virtual enviornments [here](https://realpython.com/python-virtual-environments-a-primer/).    
 
 We can now serve content from our csv file to the web.  Without any styling it's really ugly.  Let's add some HTML and CSS to make this look better.   
 
-We'll need to make a few small changes to the application so that we're rendering an HTML template and not just sending text to the browser. Change the app to the following:
-
+We'll need to make a few small changes to the application so that we're rendering an HTML template and not just sending text to the browser. Change this
+```python
+info = ""
+for i in random_course:
+    info += i + ":  " + random_course[i] + "<br>"
+return info
+```
+to this
 ```python
 info = ""
 for i in random_course:
     info += "<tr>" + "<th>"+ i +"</th>" + "<td>" + random_course[i] + "</td>" + "</tr>"
 return render_template('index.html', course_info=info)
 ```
+> Here we're adding HTML tr and th tags which will create a table.  For more on HTML tables, see this [w3schools tutorial](https://www.w3schools.com/tags/tag_tr.asp) 
 
-Create an index.html file in a new `templates` directory (`mkdir templates`).  Second, create `static/main.css`. 
+Create an index.html file in the `templates` directory (`mkdir templates`).  
 
 **./templates/index.html**
 ```HTML
 <!DOCTYPE>
 <html>
-
 <head>
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" 
 </head>
-
     <body>
-
         <table style="width:100%">
-
             {{ course_info|safe }}
-
         </table>
-
     </body>
-
 </html>
 
 ```
+
+Now create `static/main.css`.  
+
 **./static/main.css**
 ```css
 @import url('https://fonts.googleapis.com/css?family=Cinzel');
@@ -157,19 +162,19 @@ tr {
 }
 
 ```
-> Note the `@import url()`. This comes from [Google Fonts](https://fonts.google.com/).  You can use any of their thousands of multi-lingual fonts, just by adding this import to your css.  For example, `@import url('https://fonts.googleapis.com/css?family=Roboto');` and then `font-family: 'Roboto', sans-serif;`
+> Note the `@import url()`. This comes from [Google Fonts](https://fonts.google.com/).  You can use any of their thousands of multi-lingual fonts just by adding this import to your css.  For example, `@import url('https://fonts.googleapis.com/css?family=Roboto');` and then `font-family: 'Roboto', sans-serif;`
 
 
 *your page should look something like this*  
 ![](https://github.com/HCDigitalScholarship/summer-django/raw/master/flask_demo.png) 
 
-The cycle of life is complete.  You've taken data from the web and can now serve it back to your browser. More importantly, you can transform that information using Python.  You can sort classes by timeslot and create a schedule builder and integrates with Google Calendar. It's all up to you. In the next section, we discuss how to deploy your application using sites.haverford.edu. 
+The cycle of life is complete.  You've taken data from the web and can now serve it back to your browser. More importantly, you can transform that information using Python.  You can sort classes by timeslot and create a schedule builder that integrates with [Google Calendar](https://developers.google.com/calendar/quickstart/python). It's all up to you. In the next section, we discuss how to deploy your application using sites.haverford.edu. 
 
-[continue...](https://github.com/HCDigitalScholarship/summer-django/blob/master/flask_3.md)
+[continue...](https://hcdigitalscholarship.github.io/summer-django/flask_3.html)
 
-## Bonus
+### Bonus
 
-One of the most useful features of dynamic web frameworks is the option to sort and organize data.  What if we wanted just classes in Physics?  You can add a new path that will take the subject from the URL in the browser and use that to filter your data. Just add the subject to your route and pass it as an argument to your view.  Django does this very elegantly, but I wanted to be sure you know that this is possible in Flask. 
+One of the most useful features of dynamic web frameworks is the option to sort and organize data.  What if we wanted just courses in Physics?  You can add a new path that will take the subject from the URL in the browser and use that to filter your data. Just add the subject to your route and pass it as an argument to your view.  Django does this very elegantly, but I wanted to be sure you know that this is possible in Flask. 
 
 ```python
 @app.route('/<department>')
@@ -183,4 +188,4 @@ def by_subject(department):
                     info += "<tr>" + "<th>"+ i +"</th>" + "<td>" + row[i] + "</td>" + "</tr>"
         return render_template('index.html', course_info=info)
 ```
-Click here to download the complete [app.py](https://github.com/HCDigitalScholarship/summer-django/raw/master/app.py)
+Click here to download the complete [app.py](https://raw.githubusercontent.com/HCDigitalScholarship/summer-django/master/flask_app/app.py)
