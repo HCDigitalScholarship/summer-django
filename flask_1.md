@@ -5,10 +5,9 @@ nav_order: 1
 ---
 
 ## Python Web Applications  
+Welcome to Digital Scholarship.  In the following section, we're going to quickly build and deploy a Python web appication so that you can get a feel for the development process from beginning to end.  We'll also cover some useful skills and tricks as well as point you to resources that will help you in your work over the summer.  
 
-In this section, we will create and deploy a Python app to the web. 
-
-To get started, let's get some data for our app.  I going to fetch course information from the Haverford Registrar's [courses page](https://www.haverford.edu/academics/courses).  I'm going to get the url for a full search of every class offered at Haverford, Swarthmore and Bryn Mawr this coming Fall.   
+To get started, let's get some data.  I going to fetch course information from the Haverford Registrar's [courses page](https://www.haverford.edu/academics/courses).  I'm going to get the url for a full search of every class offered at Haverford, Swarthmore and Bryn Mawr this coming Fall.   
 ![](https://github.com/HCDigitalScholarship/summer-django/raw/master/search-results.png)  
 
 Looking at the results page, I can see a few important things:  
