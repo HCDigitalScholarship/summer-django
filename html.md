@@ -11,10 +11,9 @@ Talking to the 'net: [HTTP bin](https://httpbin.org/)
 
 ```python
 import socket
-
 mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-mysock.connect(('data.pr4e.org', 80))
-cmd = 'GET http://data.pr4e.org/romeo.txt HTTP/1.0\r\n\r\n'.encode()
+mysock.connect(('www.gutenberg.org', 80))
+cmd = 'GET http://www.gutenberg.org/files/120/120-0.txt HTTP/1.0\r\n\r\n'.encode()
 mysock.send(cmd)
 
 while True:
