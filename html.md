@@ -30,10 +30,9 @@ You can also easily GET with the [Python requests library](https://realpython.co
 ```python
 import requests
 response = requests.get('http://data.pr4e.org/romeo.txt')
-response.status_code
-response.content
-response.text
 ```
+
+Experiment by looking at `response.status_code`,`response.content`, and `response.text`.
 
 Our "textbook" the [Mozilla Django Tutorial](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)
 
