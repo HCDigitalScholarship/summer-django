@@ -8,7 +8,7 @@ nav_order: 2
 Now that we have some data to work with, we can start working on a web application. We'll start by creating a simple "course of the day" application that will randomly pick a course from our dataset and display information in the browser.  Later, we're going to publish the application to the web using [sites.haverford.edu](sites.haverford.edu).  If time permits, we can try a more advanced chatbot following this [tutorial](https://pusher.com/tutorials/chatbot-flask-dialogflow).   
 
 While it's not common, you can write an application in pure Python.  You'll need this [courses.csv](https://github.com/HCDigitalScholarship/summer-django/raw/master/courses.csv) in your current directory. 
-> This example from from Dr. Chuck, who is a wonderful resource when improving your Python skills. [Python for Everybody](https://www.py4e.com/) is a free version of his world-famous Coursera and edX courses.  There is also a [Django for Everybody](https://www.dj4e.com/) course in the works
+> This example comes from from Dr. Chuck, who is a wonderful resource for improving your Python skills. [Python for Everybody](https://www.py4e.com/) is a free version of his world-famous Coursera and edX courses.  There is also a [Django for Everybody](https://www.dj4e.com/) course in the works.
 
 ```python
 # https://docs.python.org/3/howto/sockets.html
