@@ -1,3 +1,9 @@
+---
+layout: default
+title: Flask, Part I
+nav_order: 1
+---
+
 This is a page for the section on creating and deploying a Flask app to the web 
 
 
