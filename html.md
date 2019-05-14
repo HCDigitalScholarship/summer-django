@@ -9,6 +9,8 @@ Back to Basics, What is the Web?
 ### [HTTP request methods](https://www.w3schools.com/tags/ref_httpmethods.asp) 
 Talking to the 'net: [HTTP bin](https://httpbin.org/)
 
+With Python, we can easily create a socket and send requests.  Below is a simple client script with a GET request.  For more a more detailed discussion of sockets, Real Python has a wonderful tutorial [Socket Programming in Python](https://realpython.com/python-sockets/) by Nathan Jennings. Try pasting the script below into a Python shell.  
+
 ```python
 import socket
 mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
