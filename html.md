@@ -30,8 +30,13 @@ You can also easily GET with the [Python requests library](https://realpython.co
 import requests
 response = requests.get('http://data.pr4e.org/romeo.txt')
 ```
+Experiment by looking at `response.status_code`,`response.content`, and `response.text`;
+or use the native Python urllib,
+```python
+import urllib.request
+response = urllib.request.urlopen('http://www.google.com')
+```
 
-Experiment by looking at `response.status_code`,`response.content`, and `response.text`.
 
 Our "textbook" the [Mozilla Django Tutorial](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)
 
