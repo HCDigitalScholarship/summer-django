@@ -3,7 +3,7 @@ layout: default
 title: HTML
 nav_order: 6
 ---
-
+{::nomarkdown}
 <!DOCTYPE html>
 <html>
 
@@ -17,3 +17,4 @@ nav_order: 6
 </body>
 
 </html>
+{:/}
