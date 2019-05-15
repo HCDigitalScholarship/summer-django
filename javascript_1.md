@@ -18,44 +18,6 @@ We will also make use of the [D3 library](https://d3js.org/)
 
 There are multiple examples of D3 on [codepen](https://codepen.io/tag/d3/) to work from. 
 
-```HTML
-<head>
-  <!-- Plotly.js -->
-   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-</head>
-
-<body>
-  <div id="myDiv" style="width: 100%; height: 700px;"><!-- Plotly chart will be drawn inside this DIV --></div>
-  <script>
-function makeplot() {
- 	Plotly.d3.csv("https://raw.githubusercontent.com/HCDigitalScholarship/summer-django/master/department_counts.csv", function(data){ processData(data) } );
-
-};
-	
-function processData(allRows) {
-
-	console.log(allRows);
-	var x = [], y = [], standard_deviation = [];
-
-	for (var i=0; i<allRows.length; i++) {
-		row = allRows[i];
-		x.push( row['department'] );
-		y.push( row['count'] );
-	}
-	console.log( 'X',x, 'Y',y, 'SD',standard_deviation );
-	makePlotly( x, y, standard_deviation );
-}
-
-function makePlotly( x, y, standard_deviation ){
-	var plotDiv = document.getElementById("plot");
-	var traces = [{
-		x: x, 
-		y: y
-	}];
-
-	Plotly.newPlot('myDiv', traces, 
-		{title: 'Number of Classes offered in Fall 2019 by Department'});
-};
-  makeplot();  </script>
-</body>
-```
+Here is an example using Plotly.js to create a chart of the number of courses offered by each department. 
+Here is the [HTML](https://raw.githubusercontent.com/HCDigitalScholarship/summer-django/master/courses_by_department.html)
+<iframe src='http://htmlpreview.github.com/?https://raw.githubusercontent.com/HCDigitalScholarship/summer-django/master/courses_by_department.html'></iframe>
