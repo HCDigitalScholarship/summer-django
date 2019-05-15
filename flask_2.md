@@ -75,7 +75,7 @@ flask_app
         └── index.html
 ```
 
-**app.py**
+**[app.py](https://raw.githubusercontent.com/HCDigitalScholarship/summer-django/master/flask_app/app.py)**
 ```python
 import csv
 import random
@@ -125,7 +125,7 @@ return render_template('index.html', course_info=info)
 Create an index.html file in the `templates` directory (`mkdir templates`).  
 
 **./templates/index.html**
-```HTML
+```
 <!DOCTYPE>
 <html>
 <head>
