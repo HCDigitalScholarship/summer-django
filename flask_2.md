@@ -10,6 +10,7 @@ Now that we have some data to work with, we can start working on a web applicati
 While it's not common, you can write an application in pure Python.  You'll need this [courses.csv](https://github.com/HCDigitalScholarship/summer-django/raw/master/courses.csv) in your current directory. 
 > This example comes from from Dr. Chuck, who is a wonderful resource for improving your Python skills. [Python for Everybody](https://www.py4e.com/) is a free version of his world-famous Coursera and edX courses.  There is also a [Django for Everybody](https://www.dj4e.com/) course in the works.
 
+**[py_socket.py](https://raw.githubusercontent.com/HCDigitalScholarship/summer-django/master/flask_app/py_socket.py)**
 ```python
 # https://docs.python.org/3/howto/sockets.html
 # https://stackoverflow.com/questions/8627986/how-to-keep-a-socket-open-until-client-closes-it
