@@ -22,12 +22,9 @@ Here is an example using Plotly.js to create a chart of the number of courses of
 Here is the [HTML](https://raw.githubusercontent.com/HCDigitalScholarship/summer-django/master/courses_by_department.html)
 
 
-<head>
   <!-- Plotly.js -->
    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-</head>
 
-<body>
   <div id="myDiv" style="width: 100%; height: 700px;"><!-- Plotly chart will be drawn inside this DIV --></div>
   <script>
 function makeplot() {
@@ -59,5 +56,5 @@ function makePlotly( x, y, standard_deviation ){
 	Plotly.newPlot('myDiv', traces, 
 		{title: 'Number of Classes offered in Fall 2019 by Department'});
 };
-  makeplot();  </script>
-</body>
+  makeplot();  
+  </script>
