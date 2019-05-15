@@ -1,6 +1,6 @@
 ---
 layout: default
-title: <HTML>
+title: HTML
 nav_order: 6
 ---
 
