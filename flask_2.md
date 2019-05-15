@@ -75,7 +75,7 @@ flask_app
         └── index.html
 ```
 
-**[app.py](https://raw.githubusercontent.com/HCDigitalScholarship/summer-django/master/flask_app/app.py)**
+**[app.py](https://raw.githubusercontent.com/HCDigitalScholarship/summer-django/master/flask_app/app_v1.py)**
 ```python
 import csv
 import random
