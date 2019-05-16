@@ -1,6 +1,0 @@
-- Install Python (win) / Brew w/ Mac
-- Anaconda 
-- PyCharm 
-- Create Github account 
-- Join DS Slack channel 
-- Link to Sites.HC 
