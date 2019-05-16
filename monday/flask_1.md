@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Flask, Part I
-parent: Monday Afternoon
+parent: Monday
 ---
 
 ## Python Web Applications  
