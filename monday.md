@@ -3,6 +3,7 @@ layout: default
 title: Monday
 has_children: true
 permalink: /monday
+nav_order: 2
 
 ---
 
