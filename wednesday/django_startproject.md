@@ -15,7 +15,7 @@ Using the [Django](https://docs.djangoproject.com/en/2.2/) docunmentation and [M
 - Add our new app to settings.py
 - Run migrations 
 - Create a superuser
-- create subdirectories in the app directory for `templates` and `static`
+- create subdirectories in the app directory for templates and static
 - Test with runserver
 
 > I try to be consistent in the language I use.  The `project directory` is the directory that was created with `django-admin startproject <project_name>`.  That directory contains `settings.py` and other global assets.  An `application directory` is created when you run `startapp` or add a third-party Django application (there are tons of them [here](https://djangopackages.org/)).  You can think of these as modules that we've imported to our central project. 
