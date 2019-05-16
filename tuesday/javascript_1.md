@@ -1,7 +1,8 @@
 ---
 layout: default
 title: JavaScript, Part I
-nav_order: 5
+nav_order: 2
+parent: Tuesday
 ---
 
 ## Javascript in DS
