@@ -10,6 +10,31 @@ Javascript is one of the most important client side programming languages.  We u
 
 The [W3 schools javascript tutorial](https://www.w3schools.com/js/) is an excellent place to start.
 
+## For loops 
+```javascript
+//define an array
+var fish_array = ["trout", "tuna", "cod", "herring", "salmon", "fry"];
+
+var text = "";
+var i;
+for (i = 0; i < fish_array.length; i++) {
+  text += fish_array[i] + "<br>";
+}
+document.getElementById("demo").innerHTML = text;
+```
+It helps me to think of this as a comparable to a while loop in Python:
+```python 
+fish_list = ["trout", "tuna", "cod", "herring", "salmon", "fry"]
+text = ''
+i = 0
+while i < len(fish_list):
+    text += fish_list[i] + "<br>"
+    i += 1
+```
+
+
+---
+
 As an example, I will show you how to make some basic visualizations of our courses data using p5.js and D3.  
 
 Much of our learning will utilize the [p5.js web editor](https://editor.p5js.org/)
