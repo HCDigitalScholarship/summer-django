@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Flask, Part I
-nav_order: 1
 ---
 
 ## Python Web Applications  
