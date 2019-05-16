@@ -2,6 +2,7 @@
 layout: default
 title: Flask, Part I
 parent: Monday
+nav_order: 1
 ---
 
 ## Python Web Applications  
