@@ -1,7 +1,10 @@
 ---
 layout: default
-title: Flask, Part I
+title: Monday Afternoon
 nav_order: 1
+has_children: true
+permalink: /monday
+
 ---
 
 This is where we get you all set up for the summer
