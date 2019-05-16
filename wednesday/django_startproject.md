@@ -5,5 +5,32 @@ nav_order: 1
 parent: Wednesday 
 ---
 
-Welcome to Django!
 ![](https://www.marc-richter.info/wp-content/uploads/2018/08/Django_Pony-632x208.png)
+
+
+Using the [Django](https://docs.djangoproject.com/en/2.2/) docunmentation and [Mozilla tutorial](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website), we will:
+- Install django 
+- Create a project
+- Create an app using `python manage.py startapp <app>`
+- Add our new app to settings.py
+- Run migrations 
+- Create a superuser
+- create subdirectories in the app directory for `templates` and `static`
+- Test with runserver
+
+> I try to be consistent in the language I use.  The `project directory` is the directory that was created with `django-admin startproject <project_name>`.  That directory contains `settings.py` and other global assets.  An `application directory` is created when you run `startapp` or add a third-party Django application (there are tons of them [here](https://djangopackages.org/)).  You can think of these as modules that we've imported to our central project. 
+  
+
+**Part II**
+Next we will:
+- Create a path for our index page in our app's `urls.py`
+- then we will create a view for our index page `path('', views.index, name='index'),`
+- Create a base.html template
+- create an index.html file
+- runserver!
+
+**Part II**
+- Add images to the app's static directory, use {% static 'file.jpg' %} to load it. 
+- Add another path to urls.py.  Link to it using <a href="{% url 'path_name' %}">Link!</a>
+
+
