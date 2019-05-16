@@ -33,6 +33,6 @@ Create a simple webpage with Django:
 **Part III**
 Add images and links using the [Django template language](https://docs.djangoproject.com/en/2.2/ref/templates/language/) 
 - Add images to the app's static directory
-- Add another path to urls.py.  Link to it using``<a href="{% url 'path_name' %}">Link!</a>`
+- Add another path to urls.py.
 
 
