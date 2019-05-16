@@ -2,6 +2,7 @@
 layout: default
 title: Flask, Part II
 nav_order: 2
+parent: Monday Afternoon
 ---
 
 
