@@ -1,7 +1,8 @@
 ---
 layout: default
 title: HTML
-nav_order: 6
+parent: Tuesday
+nav_order: 1
 ---
 ```
 <!DOCTYPE html>
