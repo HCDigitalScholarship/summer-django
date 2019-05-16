@@ -22,9 +22,10 @@ for (i = 0; i < fish_array.length; i++) {
 }
 document.getElementById("demo").innerHTML = text;
 ```
+> As an exercise, right click on this page and then click on console.  Type in each line of the code above to get a feel for the syntax of javascript.
 <p id="demo"></p>
 
-It helps me to think of this as a comparable to a while loop in Python:
+It helps me to think of JS for loops as similar to a while loop in Python:
 ```python 
 fish_list = ["trout", "tuna", "cod", "herring", "salmon", "fry"]
 text = ''
