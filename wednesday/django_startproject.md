@@ -22,14 +22,16 @@ Using the [Django](https://docs.djangoproject.com/en/2.2/) docunmentation and [M
   
 
 **Part II**
-Next we will:
-- Create a path for our index page in our app's `urls.py`
-- then we will create a view for our index page `path('', views.index, name='index'),`
-- Create a base.html template
-- create an index.html file
+Create a simple webpage with Django:
+- create a path for our index page in our app's `urls.py`
+- create a view for our index page `path('', views.index, name='index'),`
+- create a `base.html` template
+- create an `index.html` file that extends `base.html`
+- create a footer.html 
 - runserver!
 
-**Part II**
+**Part III**
+Add images and links using the [Django template language](https://docs.djangoproject.com/en/2.2/ref/templates/language/) 
 - Add images to the app's static directory, use {% static 'file.jpg' %} to load it. 
 - Add another path to urls.py.  Link to it using <a href="{% url 'path_name' %}">Link!</a>
 
