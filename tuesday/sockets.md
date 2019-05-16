@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Sockets
-nav_order: 4
+parent: Tuesday
+nav_order: 1
 ---
 
 Back to Basics, What is the Web?  
