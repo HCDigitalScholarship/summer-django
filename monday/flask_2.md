@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Flask, Part II
-parent: Monday Afternoon
+parent: Monday
 ---
 
 
