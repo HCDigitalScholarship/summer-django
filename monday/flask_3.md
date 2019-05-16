@@ -2,6 +2,7 @@
 layout: default
 title: Flask, Part III
 nav_order: 3
+parent: Monday Afternoon
 ---
 
 In this section we're going to deploy you Flask app using [sites.haverford.edu](https://sites.haverford.edu/).  If you haven't used sites before, just log in with your Haverford account and proceed to Dashboard. 
