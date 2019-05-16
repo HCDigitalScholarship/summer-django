@@ -22,6 +22,8 @@ for (i = 0; i < fish_array.length; i++) {
 }
 document.getElementById("demo").innerHTML = text;
 ```
+<p id="demo"></p>
+
 It helps me to think of this as a comparable to a while loop in Python:
 ```python 
 fish_list = ["trout", "tuna", "cod", "herring", "salmon", "fry"]
