@@ -48,18 +48,17 @@ Of couse, we could just use a list comprehension,
 but it wouldn't work in the browser.  There are advantages and disadvantages to all languages and it's a good practice to learn more than one.  
 
 ---
-![](https://placehold.it/400x90/ff6600/000?text=WARNING!)
 In the next section, you will learn how to draw, to create animations and data visualizations with p5.js. 
 
-![](https://placehold.it/400x90/ff6600/000?text=WARNING!)
 We also use the [D3 library](https://d3js.org/) very often for data visualizations. There are multiple examples of D3 on [codepen](https://codepen.io/tag/d3/) to work from.  The [plotly Python libary](https://plot.ly/python/) lets you create D3 visualizations in Python.  We also use [Dash](https://dash.plot.ly/) to generate interactive dashboards.    
 
-![](https://placehold.it/400x90/ff6600/000?text=WARNING!)
 As a quick exercise, here is an example using Plotly.js to create a chart of the number of courses offered by each department. 
 
-![](https://placehold.it/400x90/ff6600/000?text=WARNING!)
 Open up the source [HTML](https://raw.githubusercontent.com/HCDigitalScholarship/summer-django/master/courses_by_department.html) file here and have a look in the script section.  Where do you see a for loop in the script?  
-- Follow the script from function to function to get a feeling for how the graph is being generated. 
+
+Follow the script from function to function to get a feeling for how the graph is being generated. 
+
+---
 
   <!-- Plotly.js -->
    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
