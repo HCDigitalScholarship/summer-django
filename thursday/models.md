@@ -8,10 +8,9 @@ parent: Thursday
 During this session, please feel free to consult the [Django Tutorial](https://docs.djangoproject.com/en/2.2/intro/tutorial02/)
 and the [Mozilla Tutorial](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Models) tutorials on models. 
 
-What is a model?  It is a Python object that the Django ORM (object-relational mapper) uses to make databases seem familiar and friendly for Pythonistas. One of the key adavantages of this approach is that developers can use multiple databases and types of databases without having to learn the subtile differences between a query in MySQL or postgres.  We going to do that anyway, but not just right now. 
+What is a model?  It is a Python object that the Django ORM (object-relational mapper) uses so that databases are familiar and friendly for Pythonistas. One of the key adavantages of this approach is that developers can use multiple databases and types of databases without having to learn the differences between a query in MySQL or postgres.  We'll discuss sql queries later on so that you understand what's going on under the hood of the ORM.     
 
-As a quick reminder, Python is an object oriented language, so you've been using objects all along even if you didn't know it. 
-Here's a very simple object in Python from the GAM project:
+Python is an object oriented language. Here's a very simple object in Python from the GAM project:
 
 ```python 
 class CurrentItem:
@@ -19,8 +18,10 @@ class CurrentItem:
         self.name = name
         self.letters = letters
 ```
+
 To create a current item object, just use `current_item = CurrentItem`
 We can set or update the values for name and letters with `current_item.name = item_name` or `current_item.letters`
+
 ---
 In a Django model we add fields to the model. Note that there are many data types.  The most common is Charfield, for a string.  For a full list of model field types [documentation](https://docs.djangoproject.com/en/2.2/ref/models/fields/#model-field-types).:
 
