@@ -12,8 +12,7 @@ nav_order: 1
 
 - [HTTP bin](https://httpbin.org/)
 
-- With Python, we can easily create a socket and send requests.  Below is a simple client script with a GET request.  For more a more detailed discussion of sockets. 
-- Real Python has a wonderful tutorial [Socket Programming in Python](https://realpython.com/python-sockets/) by Nathan Jennings. Try pasting the script below into a Python shell.  
+- With Python, we can easily create a socket and send requests.  Below is a simple client script with a GET request.  For more a more detailed discussion of sockets Real Python has a wonderful tutorial [Socket Programming in Python](https://realpython.com/python-sockets/) by Nathan Jennings. Try pasting the script below into a Python shell.  
 
 ```python
 import socket
