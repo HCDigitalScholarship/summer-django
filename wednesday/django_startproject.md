@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Django, Part I 
+title: Introduction to Django 
 nav_order: 1
 parent: Wednesday 
 ---
@@ -8,7 +8,7 @@ parent: Wednesday
 ![](https://www.marc-richter.info/wp-content/uploads/2018/08/Django_Pony-632x208.png)
 
 
-Using the [Django](https://docs.djangoproject.com/en/2.2/) docunmentation and [Mozilla tutorial](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website), we will:
+Using the [Django](https://docs.djangoproject.com/en/2.2/) documentation and [Mozilla tutorial](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website), we will:
 - Install django 
 - Create a project
 - Create an app using `python manage.py startapp <app>`
