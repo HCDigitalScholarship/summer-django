@@ -9,7 +9,7 @@ parent: Wednesday
 
 
 Using the [Django](https://docs.djangoproject.com/en/2.2/) documentation and [Mozilla tutorial](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website), we will:
-- Install django 
+- Install django in a virtual envorionment `conda create python=3 <env_name>` or `virtualenv --p python3 <env_name>`
 - Create a project
 - Create an app using `python manage.py startapp <app>`
 - Add our new app to settings.py
