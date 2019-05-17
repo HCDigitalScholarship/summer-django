@@ -1,5 +1,6 @@
 remote_theme: pmarsceill/just-the-docs
 search_enabled: true
+title: Summer Django Orientation
 aux_links:
     "Haverford DS on GitHub":
       - "//github.com/HCDigitalScholarship/"
