@@ -72,6 +72,12 @@ import datetime
 from ckeditor.fields import RichTextField
 RichTextField(blank=True, default='')
 ```
+
+## Migrations 
+
+Keep in mind that your models.py file is a set of instructions to Django on how to structure your database.  Any changes that you make to models need to be applied to the database using `manage.py makemigrations` and then `manage.py migrate`.  These commands generate a migrations file (such as ./migrations/0001_initial.py) with step-by-step instructions to update the database.  You should not need to change them, but it's good to understand the process.  For a more in depth discussion of migrations, see this [Real Python primer](https://realpython.com/django-migrations-a-primer/).  
+
+
 Model.objects.filter()
 Model.objects.get()
 Model.object.update_or_create()
