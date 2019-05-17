@@ -31,7 +31,7 @@ When adding records to the database, we very often rely on the `update_or_create
 data = {'fish':{'name':'Sammy','type':'shark'}}
 name = data['fish']['name']
 type = data['fish']['type']
-Fish.object.update_or_create(name=name, type=type)  
+Fish.objects.update_or_create(name=name, type=type)  
 ```
 
 Q objects
