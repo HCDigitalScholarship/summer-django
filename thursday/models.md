@@ -52,6 +52,19 @@ class Fish(models.Model):
         return self.name
 ```
 
+Note the __str__ method.  This defines what is displayed in the admin interface (we'll get to that soon). 
+You can also add methods to the model. For example, for age"
+
+```python
+import datetime 
+    ... 
+    def age(self):
+        dob = self.date_of_birth
+        now = datetime.datetime.now().date()
+        age = now - dob
+        return age.days / 365
+```
+
 ## ManytoMany and Foreign Key
 
 ## RichTextField
