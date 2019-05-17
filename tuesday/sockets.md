@@ -5,12 +5,15 @@ parent: Tuesday
 nav_order: 1
 ---
 
-Back to Basics, What is the Web?  
+## What is the Web?  
+![](https://maqentaer.com/devopera-static-backup/http/devfiles.myopera.com/articles/356/article3_1.gif)
 
 ### [HTTP request methods](https://www.w3schools.com/tags/ref_httpmethods.asp) 
-Talking to the 'net: [HTTP bin](https://httpbin.org/)
 
-With Python, we can easily create a socket and send requests.  Below is a simple client script with a GET request.  For more a more detailed discussion of sockets, Real Python has a wonderful tutorial [Socket Programming in Python](https://realpython.com/python-sockets/) by Nathan Jennings. Try pasting the script below into a Python shell.  
+- [HTTP bin](https://httpbin.org/)
+
+- With Python, we can easily create a socket and send requests.  Below is a simple client script with a GET request.  For more a more detailed discussion of sockets. 
+- Real Python has a wonderful tutorial [Socket Programming in Python](https://realpython.com/python-sockets/) by Nathan Jennings. Try pasting the script below into a Python shell.  
 
 ```python
 import socket
@@ -39,7 +42,4 @@ or use the native Python urllib,
 import urllib.request
 response = urllib.request.urlopen('http://www.google.com')
 ```
-
-
-Our "textbook" the [Mozilla Django Tutorial](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)
 
