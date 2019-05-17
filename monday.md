@@ -7,8 +7,8 @@ nav_order: 2
 
 ---
 
-This is where we get you all set up for the summer
-- install Anaconda
-- create Github account
-- add to Slack team
-- workday 
+To get setup for the summer, please...
+- install [Anaconda](https://www.anaconda.com/)
+- create a [Github](https://github.com/) account if you don't already have one
+- join our [Slack team](https://haverfordds.slack.com/)
+- make sure that you know how to log hours in [Workday](https://www.haverford.edu/work) 
