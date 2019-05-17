@@ -21,8 +21,32 @@ class CurrentItem:
 ```
 To create a current item object, just use `current_item = CurrentItem`
 We can set or update the values for name and letters with `current_item.name = item_name` or `current_item.letters`
+---
+In a Django model we add fields to the model. Note that there are many data types.  The most common is Charfield, for a string.  For a full list of model field types [documentation](https://docs.djangoproject.com/en/2.2/ref/models/fields/#model-field-types).:
 
+```python
+from django.db import models
 
+class Fish(models.Model):
+    """A model for adding fish to the database."""
+
+    # Fields
+    name = models.CharField(max_length=200, help_text='The fish's prefered name')
+    type = models.CharField(max_length=20, help_text='The type of fish')
+    date_of_birth = models.DateField(auto_now=False)
+    has_fins = models.BooleanField(null=True)
+    
+    def __str__(self):
+        return self.name
+```
+
+## ManytoMany and Foreign Key
+
+## RichTextField
+```
+from ckeditor.fields import RichTextField
+RichTextField(blank=True, default='')
+```
 Model.objects.filter()
 Model.objects.get()
 Model.object.update_or_create()
