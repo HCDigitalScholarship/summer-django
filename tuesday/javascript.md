@@ -12,8 +12,7 @@ Javascript is the most important client side programming languages we use in our
 
 - Short exercise, the for loop   
 
-```javascript
-//define an array
+```
 var fish_array = ["trout", "tuna", "cod", "herring", "salmon", "fry"];
 
 var text = "";
