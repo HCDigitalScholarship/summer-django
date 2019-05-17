@@ -10,7 +10,8 @@ Javascript is the most important client side programming languages we use in our
 - Mozilla offers a useful [tutorial on JS grammar and types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types).
 - The [W3 schools javascript tutorial](https://www.w3schools.com/js/) is an excellent place to start.
 
-- Short exercise, the for loop 
+- Short exercise, the for loop   
+
 ```javascript
 //define an array
 var fish_array = ["trout", "tuna", "cod", "herring", "salmon", "fry"];
@@ -21,11 +22,13 @@ for (i = 0; i < fish_array.length; i++) {
   text += fish_array[i] + "<br>";
 }
 document.getElementById("demo").innerHTML = text;
-```
+```  
+
 > Right click on this page, click inspect and then click on console.  Type in each line of the code above to get a feel for the syntax of javascript.  If all goes well, you will see the names in the fish array printed on this page. 
 <p id="demo"></p>
 
 I can be helpful to me to think of JS for loops as similar to a while loop in Python:
+
 ```python 
 fish_list = ["trout", "tuna", "cod", "herring", "salmon", "fry"]
 text = ''
@@ -34,6 +37,7 @@ while i < len(fish_list):
     text += fish_list[i] + "<br>"
     i += 1
 ```  
+
 Alternatively, we could just use a list comprehension, `''.join([fish+'<br>' for fish in fish_list])`, but it wouldn't work in the browser.  There are advantages and disadvantages to all languages and it's a good practice to learn more than one.  
 
 ---
