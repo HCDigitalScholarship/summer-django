@@ -24,7 +24,7 @@ document.getElementById("demo").innerHTML = text;
 ```  
 
 > Right click on this page, click inspect and then click on console.  Type in each line of the code above (you can use something other than fish if you like) to get a feel for the syntax of javascript.  If all goes well, you will see the names in the array printed on this page below:
---><p id="demo"></p><-- 
+<p id="demo"></p>
 
 I can be helpful to me to think of JS for loops as similar to a while loop in Python:
 
