@@ -26,7 +26,7 @@ Let's take the following example:
 
 <body>
     <h1>Welcome to my HTMl page!</h1>
-    <p>It feels just like 1996 again. Try opening me in Netscape Navigator.</p>
+    <p>It feels just like 1996 again. Try opening me in <a href="https://en.wikipedia.org/wiki/Netscape_Navigator">Netscape Navigator</a>.</p>
 </body>
 
 </html>
