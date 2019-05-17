@@ -23,8 +23,8 @@ for (i = 0; i < fish_array.length; i++) {
 document.getElementById("demo").innerHTML = text;
 ```  
 
-> Right click on this page, click inspect and then click on console.  Type in each line of the code above to get a feel for the syntax of javascript.  If all goes well, you will see the names in the fish array printed on this page. 
-<p id="demo"></p>
+> Right click on this page, click inspect and then click on console.  Type in each line of the code above (you can use something other than fish if you like) to get a feel for the syntax of javascript.  If all goes well, you will see the names in the array printed on this page below:
+--><p id="demo"></p><-- 
 
 I can be helpful to me to think of JS for loops as similar to a while loop in Python:
 
@@ -58,7 +58,7 @@ function makeplot() {
 	
 function processData(allRows) {
 
-	console.log(allRows);
+	// console.log(allRows);
 	var x = [], y = [], standard_deviation = [];
 
 	for (var i=0; i<allRows.length; i++) {
@@ -66,7 +66,7 @@ function processData(allRows) {
 		x.push( row['department'] );
 		y.push( row['count'] );
 	}
-	console.log( 'X',x, 'Y',y, 'SD',standard_deviation );
+	// console.log( 'X',x, 'Y',y, 'SD',standard_deviation );
 	makePlotly( x, y, standard_deviation );
 }
 
