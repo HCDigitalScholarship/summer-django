@@ -17,16 +17,22 @@ var fish_array = ["trout", "tuna", "cod", "herring", "salmon", "fry"];
 
 var text = "";
 
+var i;
+// try entering console.log(i) in the console.  Note that it exists, but has no value. 
+
 for (i = 0; i < fish_array.length; i++) {
   text += fish_array[i] + "<br>";
 }
 document.getElementById("demo").innerHTML = text;
 ```  
 
-> Right click on this page, click inspect and then click on console.  Type in each line of the code above (you can use something other than fish if you like) to get a feel for the syntax of javascript.  If all goes well, you will see the names in the array printed on this page below:
+Right click on this page, click inspect and then click on console.  
+- Type in each line of the code above (you can use something other than fish if you like) to get a feel for the syntax of javascript.  
+- Use `console.log(fish_array)` to print its current value.  Note that the array can exist without any data.  It will simply show undefined. 
+- If all goes well, you will see the names in the array printed on this page below:
 <p id="demo"></p>
 
-I can be helpful to me to think of JS for loops as similar to a while loop in Python:
+It can be helpful for me to think of JS for-loops as similar to a while loop in Python:
 
 ```python 
 fish_list = ["trout", "tuna", "cod", "herring", "salmon", "fry"]
@@ -37,14 +43,23 @@ while i < len(fish_list):
     i += 1
 ```  
 
-Alternatively, we could just use a list comprehension, `''.join([fish+'<br>' for fish in fish_list])`, but it wouldn't work in the browser.  There are advantages and disadvantages to all languages and it's a good practice to learn more than one.  
+Of couse, we could just use a list comprehension,   
+`''.join([fish+'<br>' for fish in fish_list])`, 
+but it wouldn't work in the browser.  There are advantages and disadvantages to all languages and it's a good practice to learn more than one.  
 
 ---
-In the next section, you will learn to draw, create animations and data visualizations with p5.js. We also use the [D3 library](https://d3js.org/) very often for data visualizations. There are multiple examples of D3 on [codepen](https://codepen.io/tag/d3/) to work from.  The [plotly Python libary](https://plot.ly/python/) lets you create D3 visualizations in Python.  We also use [Dash](https://dash.plot.ly/) to generate interactive dashboards.    
+![](https://placehold.it/400x90/ff6600/000?text=WARNING!)
+In the next section, you will learn how to draw, to create animations and data visualizations with p5.js. 
 
+![](https://placehold.it/400x90/ff6600/000?text=WARNING!)
+We also use the [D3 library](https://d3js.org/) very often for data visualizations. There are multiple examples of D3 on [codepen](https://codepen.io/tag/d3/) to work from.  The [plotly Python libary](https://plot.ly/python/) lets you create D3 visualizations in Python.  We also use [Dash](https://dash.plot.ly/) to generate interactive dashboards.    
+
+![](https://placehold.it/400x90/ff6600/000?text=WARNING!)
 As a quick exercise, here is an example using Plotly.js to create a chart of the number of courses offered by each department. 
-Open up the source [HTML](https://raw.githubusercontent.com/HCDigitalScholarship/summer-django/master/courses_by_department.html) file here and have a look in the script section.  Where do you see a for loop in the script?  Follow the script from function to function to get a feeling for how the graph is being generated. 
 
+![](https://placehold.it/400x90/ff6600/000?text=WARNING!)
+Open up the source [HTML](https://raw.githubusercontent.com/HCDigitalScholarship/summer-django/master/courses_by_department.html) file here and have a look in the script section.  Where do you see a for loop in the script?  
+- Follow the script from function to function to get a feeling for how the graph is being generated. 
 
   <!-- Plotly.js -->
    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
