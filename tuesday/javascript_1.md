@@ -1,6 +1,6 @@
 ---
 layout: default
-title: JavaScript, Part I
+title: JavaScript
 nav_order: 4
 parent: Tuesday
 ---
