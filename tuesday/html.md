@@ -40,3 +40,5 @@ Let's take the following example:
 ```
 
 What do you think each element does? Do some elements seem different in structure than others?
+
+The <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">text fundamentals section</a> of the Mozilla HTML Tutorial will guide us on the basics of HTML. Read through it and create a new HTML file that tells us something about you. What are you interested in? What are your hobbies? What have your favorite classes been? Save the file with the ".html" extension
