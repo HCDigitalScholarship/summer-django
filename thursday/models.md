@@ -19,8 +19,8 @@ class CurrentItem:
         self.letters = letters
 ```
 
-To create a current item object, just use `current_item = CurrentItem`
-We can set or update the values for name and letters with `current_item.name = item_name` or `current_item.letters`
+To create a current item object, just use `current = CurrentItem`
+We can set or update the values for name and letters with `current.name = item_name` or `current.letters`
 
 Python 3.7+ comes with a [native dataclass object](https://realpython.com/python-data-classes/), which is an elegant way to define a data class object. 
 
