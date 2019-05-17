@@ -22,6 +22,17 @@ class CurrentItem:
 To create a current item object, just use `current_item = CurrentItem`
 We can set or update the values for name and letters with `current_item.name = item_name` or `current_item.letters`
 
+Python 3.7+ comes with a [native dataclass object](https://realpython.com/python-data-classes/), which is an elegant way to define a data class object. 
+
+```python
+from dataclasses import dataclass
+
+@dataclass
+class CurrentItem:
+    name: str
+    letters: str
+```
+
 ---
 In a Django model we add fields to the model. Note that there are many data types.  The most common is Charfield, for a string.  For a full list of model field types [documentation](https://docs.djangoproject.com/en/2.2/ref/models/fields/#model-field-types).:
 
