@@ -26,14 +26,14 @@ Let's take the following example:
 
 <body>
     <h1>Welcome to my HTMl page!</h1>
-    <p>It feels just like 1996 again, in my high school computer lab. The computer lab manager was also my swim coach, Mr. Neat. Sometimes we would have class in the computer lab and learn how to make very basic web pages, but my primary engagement with the Web was through America Online. To open a web page, I had to: 
+    <p>It feels just like 1996 again, in my high school computer lab. The computer lab manager was also my swim coach, Mr. Neat. Sometimes we would have class in the computer lab and learn how to make very basic web pages, but my primary engagement with the Web was through America Online. To open a web page, I had to: </p>
     <ul>
         <li>Make sure no one was on the phone.</li>
         <li>Open the AOL program</li>
         <li>Listen to the modem call a phone number and connect</li>
         <li>Open the browser in AOL and type in an address for a web page</li>
     </ul>
-    It was not the most soothing sequences of sounds. It sounded like <a href="https://www.youtube.com/watch?v=D1UY7eDRXrs">this</a>!</p>
+    <p>It was not the most soothing sequences of sounds. It sounded like <a href="https://www.youtube.com/watch?v=D1UY7eDRXrs">this</a>!</p>
 </body>
 
 </html>
