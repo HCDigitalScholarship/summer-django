@@ -21,12 +21,12 @@ Let's take the following example:
 <html>
 
 <head>
-    <title>My Retro Page</title>
+    <title>My First Page</title>
 </head>
 
 <body>
-    <h1>Welcome to my HTMl page</h1>
-    <p>It feels just like 1996 again.</p>
+    <h1>Welcome to my HTMl page!</h1>
+    <p>It feels just like 1996 again. Try opening me in Netscape Navigator.</p>
 </body>
 
 </html>
