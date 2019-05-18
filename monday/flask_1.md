@@ -10,16 +10,21 @@ Welcome to Digital Scholarship.  In the following section, we're going to quickl
 
 <img style="width=10%;" src="https://cdn-images-1.medium.com/max/1200/1*vdSIa2rFEAZS1YUsgOZR0A.jpeg">
 
-To get started, let's get some data.  I going to fetch course information from the Haverford Registrar's [courses page](https://www.haverford.edu/academics/courses).  I'm going to get the url for a full search of every class offered at Haverford, Swarthmore and Bryn Mawr this coming Fall.   
+--- 
+
+To get started, let's get some data.  I'm going to fetch course information from the Haverford Registrar's [courses page](https://www.haverford.edu/academics/courses).  Let's get the url for a full search of every class offered at Haverford, Swarthmore and Bryn Mawr this coming Fall. 
+
 ![](https://github.com/HCDigitalScholarship/summer-django/raw/master/search-results.png)  
 
-Looking at the results page URL, I can see a few important things:  
+Looking at the results page URL, I can see my query `semester=fall_2019`, `college=bryn_mawr` `&haverford` and so on:  
 
-`https://www.haverford.edu/academics/results?semester%5B0%5D=fall_2019&college%5B0%5D=bryn_mawr&college%5B1%5D=haverford&college%5B2%5D=swarthmore&page=1&per_page=50`    
+```
+https://www.haverford.edu/academics/results?semester%5B0%5D=fall_2019&college%5B0%5D=bryn_mawr&college%5B1%5D=haverford&college%5B2%5D=swarthmore&page=1&per_page=50    
+```
 
 - Notice the `&page=1` in the URL.  I can change that and I'll get the second page of results.  
-- If you right click and view the page source, you can see that all of the information I'd want is contained in the table <tbody></tbody> tags.  Using a Python library called [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/), I can parse the HTML to get the information that we want.
-- I'll use the requests library to fetch the HTML from the web.  Note that there are 51 pages of results. `range(1,52)` move through each page of search results and scrape the results.  You'd need to update that value for a different search.  
+- If you right click, inspect and view the page source, you can see that all of the information I'd want is contained in the table <tbody></tbody> tags.  Using a Python library called [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/), I can parse the HTML to get the information that we want.
+- I'll use the requests library to fetch the HTML from the web.  Note that there are 51 pages of results. `for i in range(1,52)` will change the page `&page={i}` and scrape each page of results.  You'd need to update that value for a different search.  Note that I'm using an [f-string](https://realpython.com/python-f-strings/) to update the url.  If you using a version earlier than 3.6, you'll need to use `'&page={}'.format(i)` or `&page=%d' % i`.  
 
 ```python 
 import requests
@@ -27,7 +32,7 @@ from bs4 import BeautifulSoup
 courses = {}
 
 for i in range(1,52):
-    page = requests.get('https://www.haverford.edu/academics/results?semester%5B0%5D=fall_2019&college%5B0%5D=bryn_mawr&college%5B1%5D=haverford&college%5B2%5D=swarthmore&page={}&per_page=50'.format(i))
+    page = requests.get(f'https://www.haverford.edu/academics/results?semester%5B0%5D=fall_2019&college%5B0%5D=bryn_mawr&college%5B1%5D=haverford&college%5B2%5D=swarthmore&page={i}&per_page=50')
     soup = BeautifulSoup(page.text, 'html.parser')
     course_table = soup.tbody  #This selects all of the content between the <tbody> </tbody> tags
     links = course_table.find_all('a', href=True)
@@ -46,6 +51,8 @@ for i in range(1,52):
 Now that we have a dictionary of course ids and their urls, I can visit each individual course page to fetch the data.  
 ![](https://github.com/HCDigitalScholarship/summer-django/raw/master/individual_page.png) 
 
+For each course, I'll add the campus, semester, title, number of credits, department and so on.
+
 ```python
 for course in courses:
     url = courses[course]['url']
@@ -62,7 +69,11 @@ for course in courses:
     courses[course]['additional_info'] = soup.find("td", text="Additional Course Info").find_next_sibling("td").text
     courses[course]['misc_links'] = soup.find("td", text="Miscellaneous Links").find_next_sibling("td").text
 ```
-This can take some time and saves all of your data into memory so be careful with large datasets. To save the `courses` dictionary, we can either save it as a binary pickle or a csv.  
+This can take some time and will save all of the data into memory so be careful with large datasets. 
+
+---
+
+To save the `courses` dictionary, we can either save it as a binary pickle or a csv.  
 
 ```python
 import pickle
