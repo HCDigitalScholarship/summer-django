@@ -172,7 +172,7 @@ tr {
 
 The cycle of life is complete.  You've taken data from the web and can now serve it back to your browser. More importantly, you can transform that information using Python.  You can sort classes by timeslot and create a schedule builder that integrates with [Google Calendar](https://developers.google.com/calendar/quickstart/python). It's all up to you. In the next section, we discuss how to deploy your application using sites.haverford.edu. 
 
-[continue...](https://hcdigitalscholarship.github.io/summer-django/flask_3.html)
+[continue...](https://hcdigitalscholarship.github.io/summer-django/monday/flask_3.html)
 
 ### Bonus
 
