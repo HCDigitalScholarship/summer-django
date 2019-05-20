@@ -2,7 +2,7 @@
 layout: default
 title: Wireframing
 parent: Tuesday
-nav_order: 2
+nav_order: 1
 ---
 
 ## Wireframing 
