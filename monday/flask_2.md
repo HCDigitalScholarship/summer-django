@@ -52,9 +52,10 @@ def createServer():
         print(exc)
 
     serversocket.close()
-
-print('Access http://localhost:9000')
-createServer()
+    
+if __name__ == "__main__":
+    print('Access http://localhost:9000')
+    createServer()
 ```
 
 ## Flask 
