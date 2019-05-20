@@ -12,18 +12,21 @@ Welcome to Digital Scholarship.  In the following section, we're going to quickl
 
 --- 
 
-To get started, let's get some data.  I'm going to fetch course information from the Haverford Registrar's [courses page](https://www.haverford.edu/academics/courses).  Let's get the url for a full search of every class offered at Haverford, Swarthmore and Bryn Mawr this coming Fall. 
-
+To get started, let's get some data.  
+- I'm going to fetch course information from the Haverford Registrar's [courses page](https://www.haverford.edu/academics/courses).  
 ![](https://github.com/HCDigitalScholarship/summer-django/raw/master/search-results.png)  
 
-Looking at the results page URL, I can see my query `semester=fall_2019`, `college=bryn_mawr` `&haverford` and so on:  
+- Let's run a search and get the url for a full search of every class offered at Haverford, Swarthmore and Bryn Mawr this coming Fall. 
+- Looking at the results page URL, I can see my query `semester=fall_2019`, `college=bryn_mawr` `&haverford` and so on:  
 
 ```
 https://www.haverford.edu/academics/results?semester%5B0%5D=fall_2019&college%5B0%5D=bryn_mawr&college%5B1%5D=haverford&college%5B2%5D=swarthmore&page=1&per_page=50    
 ```
 
 - Notice the `&page=1` in the URL.  I can change that and I'll get the second page of results.  
+
 - If you right click, inspect and view the page source, you can see that all of the information I'd want is contained in the table <tbody></tbody> tags.  Using a Python library called [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/), I can parse the HTML to get the information that we want.
+
 - I'll use the requests library to fetch the HTML from the web.  Note that there are 51 pages of results. `for i in range(1,52)` will change the page `&page={i}` and scrape each page of results.  You'd need to update that value for a different search.  Note that I'm using an [f-string](https://realpython.com/python-f-strings/) to update the url.  If you using a version earlier than 3.6, you'll need to use `'&page={}'.format(i)` or `&page=%d' % i`.  
 
 ```python 
@@ -92,5 +95,5 @@ with open('courses.csv','w') as f:
 ```
 Please feel free to try and adapt the code above.  You can also download the [csv here](https://github.com/HCDigitalScholarship/summer-django/raw/master/courses.csv) or the [pickle file](https://github.com/HCDigitalScholarship/summer-django/raw/master/courses.pickle).
 
-[continue...](https://hcdigitalscholarship.github.io/summer-django/flask_2.html)
+[continue...](https://hcdigitalscholarship.github.io/summer-django/monday/flask_2.html)
     
