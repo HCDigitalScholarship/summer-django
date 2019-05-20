@@ -130,14 +130,21 @@ Create an index.html file in the `templates` directory (`mkdir templates`).
 ```
 <!DOCTYPE>
 <html>
+
 <head>
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" 
 </head>
+
     <body>
+
         <table style="width:100%">
+
             {{ course_info|safe }}
+
         </table>
+
     </body>
+
 </html>
 
 ```
