@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Django Models 
-nav_order: 1
-parent: Thursday 
+nav_order: 4
+parent: Wednesday 
 ---
 ## Models 
 During this session, please feel free to consult the [Django Tutorial](https://docs.djangoproject.com/en/2.2/intro/tutorial02/)
