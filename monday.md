@@ -13,5 +13,8 @@ To get set up for the summer, please...
 - create a [Github](https://github.com/) account if you don't already have one
 - join our [Slack team](https://haverfordds.slack.com/)
 - make sure that you know how to log hours in [Workday](https://www.haverford.edu/work) 
+- optional terminal emulators: [Hyper](https://hyper.is/), [iTerm2](https://www.iterm2.com/) for macOS
+
+---
 
 ![](https://github.com/HCDigitalScholarship/summer-django/raw/master/2_states_programer.png)
