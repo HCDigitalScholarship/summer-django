@@ -22,4 +22,13 @@ p {
   }
 ```
 
-[Mozilla CSS Tutorial](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS)
+Let's look at the [Mozilla CSS Tutorial](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS) for some more on how to use CSS, and use some of these rules to style the HTML pages you created earlier.
+
+## Inspect tools
+
+We can actually see how this works in real time using the "Inspect" feature of most web browsers (Firefox and Safari call it "Inspect Element," Chrome calls it "Inspect." If you're using Safari, make sure the "Developer" menu is enabled in your preferences.) Right- or secondary-click on any part of a web page in your browser and open the Inspect tool. Start tinkering!
+
+## HTML + CSS + Javascript libraries
+Luckily, UI developers and experts have done _lots_ of heavy lifting for us already, and have created libraries that combine HTML, CSS, and Javascript (more on that this afternoon) to create beautiful and responsive web interfaces. [Bootstrap](https://getbootstrap.com/), developed at Twitter in 2011 to create consistency across internal tools, is one of the first and most popular front-end frameworks on the web today. Frameworks like these use a [grid](https://getbootstrap.com/docs/4.3/layout/grid/) system to create responsive sites, a combination of HTML elements and attributes with CSS rules that shape the layout of web pages that responds to window sizes. 
+
+One of the most useful concepts 
