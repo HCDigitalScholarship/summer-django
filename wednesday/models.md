@@ -28,9 +28,17 @@ Python 3.7+ comes with a [native dataclass object](https://realpython.com/python
 from dataclasses import dataclass
 
 @dataclass
-class CurrentItem:
-    name: str
-    letters: str
+class Course:
+    campus: str    # 'campus' has no default value
+    semester: str
+    title: str
+    credit: int = 1  # assign a default value for 'credit'
+    department: str
+    instructor: str
+    times: str
+    room: str 
+    additional_info: str
+    misc_links: str
 ```
 
 ---
