@@ -15,7 +15,7 @@ Usability.gov, a web site of the federal government's Department of Health and H
 
 ### Accessibility
 
-An accessible application is one that can be viewed on a variety of devices, and can accept multiple modes of input (mouse click, keyboard input, touch screen) from users of varying abilities and/or impairments. This means writing in accessible language, clearly structuring pages, designing for colorblind users, avoiding hard-to-read text... the list is long and intimidating. The World Wide Web Consortium has an excellent [accessibility guide](https://www.w3.org/WAI/tutorials/page-structure/), as well as tools for checking your site's HTML for basic markers of accessible design. 
+An accessible application is one that can be viewed on a variety of devices, and can accept multiple modes of input (mouse click, keyboard input, touch screen) from users of varying abilities and/or impairments. This means writing in accessible language, clearly structuring pages, designing for colorblind users, avoiding hard-to-read text... the list is long and intimidating. The World Wide Web Consortium has an excellent [accessibility guide](https://www.w3.org/WAI/tutorials/page-structure/), as well as a [validator tool](https://validator.w3.org/) for checking your site's HTML for basic markers of accessible design. 
 
 ### Wireframing 
 
