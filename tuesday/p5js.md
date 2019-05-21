@@ -16,3 +16,11 @@ The following is a creative coding exercise to help you become familiar with the
 - [Stripes visualization](https://editor.p5js.org/slcruz/sketches/mCzhpwQ_7)
 
 This section is based on the [P5.js workshop](https://github.com/Princeton-CDH/playingwithdata) at Princeton's Center for Digital Humanities. Many thanks to the Princeton CDH for sharing these materials and for organizing a remarkable workshop! 
+
+## Chicken Parade
+
+- [Noor](https://hcdigitalscholarship.github.io/summer-django/p5chickens/Noor.html)
+- [Aarushi](https://hcdigitalscholarship.github.io/summer-django/p5chickens/aarushi.html)
+- [Aleena](https://hcdigitalscholarship.github.io/summer-django/p5chickens/aleena.html)
+- [Freddie](https://hcdigitalscholarship.github.io/summer-django/p5chickens/freddie.html)
+- [Ian](https://hcdigitalscholarship.github.io/summer-django/p5chickens/ianchicken.html)
