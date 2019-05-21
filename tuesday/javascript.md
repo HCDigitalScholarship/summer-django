@@ -10,6 +10,22 @@ Javascript is the most important client side programming languages we use in our
 - Mozilla offers a useful [tutorial on JS grammar and types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types).
 - The [W3 schools javascript tutorial](https://www.w3schools.com/js/) is an excellent place to start.
 
+
+It can be helpful for me to think of JS for-loops as similar to a while loop in Python:
+
+```python 
+fish_list = ["trout", "tuna", "cod", "herring", "salmon", "fry"]
+text = ''
+i = 0
+while i < len(fish_list):
+    text += fish_list[i] + "<br>"
+    i += 1
+```  
+
+Of couse, we could just use a list comprehension,   
+`''.join([fish+'<br>' for fish in fish_list])`, 
+but it wouldn't work in the browser.  There are advantages and disadvantages to all languages and it's a good practice to learn more than one. 
+
 - Short exercise, the for loop   
 
 ```
@@ -32,21 +48,7 @@ Right click on this page, click inspect and then click on console.
 - If all goes well, you will see the names in the array printed on this page below:
 <p id="demo"></p>
 
-It can be helpful for me to think of JS for-loops as similar to a while loop in Python:
-
-```python 
-fish_list = ["trout", "tuna", "cod", "herring", "salmon", "fry"]
-text = ''
-i = 0
-while i < len(fish_list):
-    text += fish_list[i] + "<br>"
-    i += 1
-```  
-
-Of couse, we could just use a list comprehension,   
-`''.join([fish+'<br>' for fish in fish_list])`, 
-but it wouldn't work in the browser.  There are advantages and disadvantages to all languages and it's a good practice to learn more than one.  
-
+ 
 ---
 In the next section, you will learn how to draw, to create animations and data visualizations with p5.js. 
 
