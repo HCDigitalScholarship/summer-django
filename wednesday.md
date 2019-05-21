@@ -13,7 +13,7 @@ Welcome to Django!
 
 - [Digital Ocean Django Tutorials](https://www.digitalocean.com/community/tags/django?type=tutorials)
 
-- [Real Python Django Tutorials)(https://realpython.com/tutorials/django/)
+- [Real Python Django Tutorials](https://realpython.com/tutorials/django/)
 
 - [Lynda Django Tutorials](https://www.lynda.com/Django-tutorials/8494-0.html)
 
