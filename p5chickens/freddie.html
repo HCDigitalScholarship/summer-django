@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+
+    <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+    canvas {
+      display: block;
+    }
+
+    </style>
+  
+  <div id="chicken"></div>
+    <script> 
+    let y = 100;
+
+    function setup() {
+      createCanvas(400, 400).parent("chicken");
+      frameRate(60);
+    }
+    let value = 'orange';
+    let value1 = 'yellow';
+
+    function draw() {
+      // Uncomment below to unleash party chicken
+      // bgcolor = '#' + (0x1000000 + (Math.random()) * 0xffffff).toString(16).substr(1, 6)
+      // background(bgcolor);
+      background('#9CE9EE')
+      fill(value1)
+      rect(50, y, 300, 250);
+      fill('black');
+      eyecolor = '#' + (0x1000000 + (Math.random()) * 0xffffff).toString(16).substr(1, 6)
+      fill(eyecolor);
+      circle(125, y + 50, 25);
+      circle(275, y + 50, 25);
+      fill(value);
+      if (mouseIsPressed) {
+        circle(200, y + 125, 25);
+      } else {
+        rect(100, y + 125, 200, 50);
+      }
+      y = y - 5;
+      if (y < -250) {
+        y = height;
+      }
+      if (y === -250) {
+        value1 = '#' + (0x1000000 + (Math.random()) * 0xffffff).toString(16).substr(1, 6)
+      }
+    }
+
+    function mouseClicked() {
+      if (value === 'orange') {
+        value = 255;
+      } else {
+        value = 'orange';
+      }
+    }
+    </script>
+  </body>
+</html>
