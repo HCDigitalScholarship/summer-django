@@ -25,5 +25,5 @@ This section is based on the [P5.js workshop](https://github.com/Princeton-CDH/p
 - [Freddie](https://hcdigitalscholarship.github.io/summer-django/p5chickens/freddie.html)
 - [Ian](https://hcdigitalscholarship.github.io/summer-django/p5chickens/ianchicken.html)
 - [Mike](https://hcdigitalscholarship.github.io/summer-django/p5chickens/mike.html)
-- [Yuying](https://hcdigitalscholarship.github.io/summer-django/yrong.html)
-- [Claire](https://hcdigitalscholarship.github.io/summer-django/zziyaow.html)
+- [Yuying](https://hcdigitalscholarship.github.io/summer-django/p5chickens/yrong.html)
+- [Claire](https://hcdigitalscholarship.github.io/summer-django/p5chickens/zziyaow.html)
