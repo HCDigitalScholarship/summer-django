@@ -131,6 +131,17 @@ class Caja(models.Model):
         return '{}/{}/{}'.format(self.archivo, self.colección, self.número_de_caja)
 ```
 
+## Set list of options 
+```python
+STATUS_CHOICES = (
+    ('NONE', 'Sin correcciones'),
+    ('IN', 'En progreso'),
+    ('DONE', 'Compitió'),
+    ('FINAL', 'Competido y verificado'),
+)
+status = models.CharField(max_length=20, choices=STATUS_CHOICES, blank=True)
+```
+
 
 ## RichTextField
 ```
