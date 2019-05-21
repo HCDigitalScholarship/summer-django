@@ -10,5 +10,54 @@
   </head>
   <body>
     <div id="mike_chicken"></div>
+<script>
+let myTable;
+let maxYear = 0;
+
+function preload() {
+  myTable = loadTable("https://raw.githubusercontent.com/HCDigitalScholarship/summer-django/master/temp.csv", "csv", "header");
+}
+
+function setup() {
+  createCanvas(400, 400);
+  frameRate(10);
+  textSize(25);
+
+  print(myTable.getRowCount() + ' total rows in table');
+  print(myTable.getColumnCount() + ' total columns in table');
+  
+}
+
+function draw() {
+  background(0,200,200);
+
+  let temps = myTable.getColumn(2);
+  drawPoints(temps.slice(1,maxYear));
+  
+  if (maxYear < temps.length) {
+  	maxYear = maxYear + 1;
+  
+  fill(255,204,0);
+  textSize(25);
+  }
+}
+
+function drawPoints(data) {
+  noFill();
+
+  let x = 0;
+  
+  beginShape();
+	for (let t of data) {
+		// set y value of point by rescaling the temperature
+    var y = map(t, min(data), max(data), height, 0);
+		// draw a vertex
+    vertex(x, y); 
+    // update x value on each loop
+    x = x + width/138;
+    fill(145, 11, 1);
+    textSize(25);
+    text(maxYear + 1879, 325,350);
+    </script>
   </body>
 </html>
