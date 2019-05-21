@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+  
+  <style>
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  canvas {
+    display: block;
+  }
+  </style>
+  
+  <div id="chicken"></div>
+  
+  <script>
+  function setup() {
+   createCanvas(400, 400).parent("chicken");
+  }
+
+  function draw() {
+    background(156, 187, 237);
+
+    let c = color(247, 244, 153); // yellow rect
+    fill(c);
+    noStroke();
+    rect(50, 50, 300, 250);
+
+    let eye = color(61, 61, 55); // eyes
+    fill(eye);
+    noStroke();
+    circle(150, 100, 20);
+    circle(250, 100, 20);
+
+    let m = color(226, 176, 106); // mouth
+    fill(m);
+    noStroke();
+    rect(mouseX,100, mouseX,200, mouseY,200, mouseY,50);
+}
+  </script>
+  </body>
+</html>
