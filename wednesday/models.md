@@ -77,8 +77,60 @@ import datetime
 
 ![](https://mdn.mozillademos.org/files/16479/local_library_model_uml.png)
 - [ManytoMany](https://docs.djangoproject.com/en/2.1/ref/models/fields/#manytomanyfield)
+
+```python
+class Persona(models.Model):
+    """A person."""
+
+    nombre_de_la_persona = models.CharField(max_length=200, null=True)
+    nombre = models.CharField(max_length=200, blank=True)
+    segundo = models.CharField(max_length=200, blank=True)
+    apellido_paterno = models.CharField(max_length=200, blank=True)
+    apellido_materno = models.CharField(max_length=200, blank=True)
+    fecha_de_nacimiento = models.CharField(max_length=200, blank=True)
+    fecha_desaparicion = models.CharField(max_length=200, blank=True)
+    edad_en_el_momento = models.CharField(max_length=200, blank=True)
+    género = models.CharField(max_length=200, blank=True)
+    etnicidad = models.CharField(max_length=200, blank=True)
+    profesión = models.CharField(max_length=200, blank=True)
+    actividades_políticas = models.ManyToManyField('Organización', blank=True)
+    # relaciones = models.ManyToManyField('Relación', blank=True)
+    image = models.ManyToManyField('Imagen', blank=True)
+    notas = RichTextField(blank=True)
+
+    def __str__(self):
+        return self.nombre_de_la_persona
+
+    def get_absolute_url(self):
+        return "/persona/%i/" % self.id
+```
+
 vs.
 - [ForeignKey](https://docs.djangoproject.com/en/2.1/ref/models/fields/#foreignkey)
+
+```python
+class Caja(models.Model):
+    """A folder."""
+
+    archivo = models.ForeignKey('Archivo', on_delete=models.CASCADE, default=1)
+    colección = models.ForeignKey('Colección', on_delete=models.CASCADE, default=1)
+    número_de_caja = models.CharField(max_length=200, blank=True)
+    carpetas = models.ManyToManyField('Carpeta', blank=True, related_name='carpetas')
+    departamento = models.ManyToManyField(
+        Lugar, blank=True, related_name='departamento'
+    )
+    municipios = models.ManyToManyField(Lugar, blank=True, related_name='municipios')
+    letras = models.CharField(max_length=200, blank=True)
+    legajos = models.CharField(max_length=200, blank=True)
+    fechas_extremas = models.CharField(max_length=200, blank=True)
+    volumen_en_metros_lineales = models.CharField(max_length=200, blank=True)
+    sistema_digital = models.CharField(max_length=200, blank=True)
+    descripción = RichTextField(blank=True, default='')
+
+    def __str__(self):
+        return '{}/{}/{}'.format(self.archivo, self.colección, self.número_de_caja)
+```
+
 
 ## RichTextField
 ```
