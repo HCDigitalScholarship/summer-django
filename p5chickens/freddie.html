@@ -25,17 +25,16 @@
     let y = 100;
 
     function setup() {
-      createCanvas(400, 400).parent("chicken");
+      createCanvas(400, 400);
       frameRate(60);
     }
     let value = 'orange';
     let value1 = 'yellow';
 
     function draw() {
-      // Uncomment below to unleash party chicken
-      // bgcolor = '#' + (0x1000000 + (Math.random()) * 0xffffff).toString(16).substr(1, 6)
-      // background(bgcolor);
-      background('#9CE9EE')
+      bgcolor = '#' + (0x1000000 + (Math.random()) * 0xffffff).toString(16).substr(1, 6)
+      background(bgcolor);
+      //background('#9CE9EE')
       fill(value1)
       rect(50, y, 300, 250);
       fill('black');
