@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+  <style>
+  html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+</style>
+  <div id="robchick"></div>
+  
+    <script >function setup() {
+  createCanvas(400,400).parent("robchik");
+  background(195,200,230);
+}
+
+function draw() {
+  fill(225,220,160);
+  rect(50,50,300,250);
+  fill(255,0,0);
+  rect(190,50,20,40);
+  fill(135,140,150);
+  line(90,90,25,25);
+  line(310,90,375,25);
+  fill(135,140,150);
+  circle(125,125,25);
+  circle(275,125,25);
+  fill(255,255,255);
+  circle(125,125,7);
+  circle(275,125,7);
+  fill(215,175,105);
+  rect(100,200,200,50);
+  fill(255,255,255);
+  rect(150,200,50,25);
+  fill(255,255,255);
+  rect(210,200,50,25);
+  fill(40,60,130);
+  textSize(40);
+  text("Hello!",150,350);
+ 
+}
+</script>
+  </body>
+</html>
