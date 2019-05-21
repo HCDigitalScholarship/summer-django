@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+    
+</head>
+
+<body>
+<!-- style block -->
+<style>
+
+<div id="chicken"></div>
+
+<script>
+
+function setup() {
+  createCanvas(600, 600).parent("chicken");<!-- tells where on this page to create this chicken -->
+}
+
+let valueText = "";
+let valueLeft = (150,200,100,100);
+let valueRite = (450,200,100,100);
+
+function draw() {
+  noStroke();
+  background(100,150,200);
+  
+  fill(255,255,0);
+  rect(75,100,450,350);
+  
+  fill(250,150,0);
+  rect(175,300,250,75);
+  
+  fill(0,0,0);
+  ellipse(valueLeft);
+  ellipse(valueRite);
+  //ellipse(150,200,100,100);
+  //ellipse(450,200,100,100);
+  
+  fill(255,0,0);
+  textSize(45);
+  textAlign(CENTER);
+  text(valueText,300,550);
+}
+
+let value = 0;
+
+
+function keyPressed() {
+  if (keyCode === LEFT_ARROW) {
+    valueRite = (150,200,0,0);
+  } else if (keyCode === RIGHT_ARROW) {
+    valueLeft = (450,200,0,0);
+  }
+}
+
+function mouseClicked() {
+  if (valueText === "") {
+    valueText = ("Hello!")
+  } else {
+    valueText = "";
+  }
+}
+
+</script>
+
+</style>
+
+</body>
+
+</html>
