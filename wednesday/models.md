@@ -75,6 +75,11 @@ import datetime
 
 ## ManytoMany and Foreign Key
 
+![](https://mdn.mozillademos.org/files/16479/local_library_model_uml.png)
+- [ManytoMany](https://docs.djangoproject.com/en/2.1/ref/models/fields/#manytomanyfield)
+vs.
+- [ForeignKey](https://docs.djangoproject.com/en/2.1/ref/models/fields/#foreignkey)
+
 ## RichTextField
 ```
 from ckeditor.fields import RichTextField
