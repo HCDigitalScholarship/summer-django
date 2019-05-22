@@ -11,6 +11,10 @@ Welcome to Django!
 
 - [Is Django really worth learning?](https://codeburst.io/is-django-really-worth-learning-222192396431)
 
+- [The State of Django, panel at DjangoCon18](https://youtu.be/TrAFQW7Wza0)
+
+- [Russell Keith-Magee - Keynote - PyCon 2019](https://youtu.be/ftP5BQh1-YM)
+
 - [Digital Ocean Django Tutorials](https://www.digitalocean.com/community/tags/django?type=tutorials)
 
 - [Real Python Django Tutorials](https://realpython.com/tutorials/django/)
