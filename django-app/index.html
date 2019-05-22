@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE>
+<html>
+
+<head>
+    <link rel="stylesheet" href="{% static 'main.css' %}" >
+</head>
+
+    <body>
+
+        <table style="width:100%">
+
+            {{ course_info|safe }}
+
+        </table>
+
+    </body>
+
+</html>
