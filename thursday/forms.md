@@ -8,7 +8,7 @@ parent: Thursday
 Forms! 
 
 ```python
-ef index(request):
+def index(request):
     if request.method == 'POST':
         form = CourseForm(request.POST)
         search_form = SearchForm(request.POST)
