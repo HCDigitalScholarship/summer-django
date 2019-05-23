@@ -7,6 +7,26 @@ parent: Thursday
 
 Forms! 
 
+**forms.py**
+```python 
+from django import forms
+from newapp.models import Course
+from django.forms import ModelForm
+
+
+class CourseForm(ModelForm):
+    class Meta:
+        model = Course
+        #fields = ['campus', 'semester', 'title', 'credit', 'department', 'instructor', 'times', 'room']
+        #exclude = ['campus']
+        fields = '__all__'
+
+
+class SearchForm(forms.Form):
+    search = forms.CharField(label='search', max_length=100)
+```
+
+**views.py**
 ```python
 def index(request):
     if request.method == 'POST':
