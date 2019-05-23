@@ -53,3 +53,14 @@ def index(request):
         now = datetime.datetime.now()
         return render(request, 'index.html', {'current_date': now, 'form':form, 'search':search_form})
 ```
+
+**index.html**
+```
+
+{% if form %}
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form }}
+<input type="submit" value="Submit" />
+</form>
+```
