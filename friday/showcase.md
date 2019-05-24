@@ -10,13 +10,16 @@ This summer we will be working on a wide range of projects.  We encourage you to
 Many of our projects share functionality.  Feel free to take features or ideas from other projects and make them your own. 
 
 ---
+
 - [The *Grupo de Apoyo Mutuo* digital archive](https://archivogam.haverford.edu/)
 
 **Description**
 > This is a post-custodial...
 
 **Features**
+
 > jQuery datatables, object storage, visual search...
+
 ---
 
 - [Ticha](https://ticha.haverford.edu)
@@ -27,6 +30,7 @@ Many of our projects share functionality.  Feel free to take features or ideas f
 > jQuery datatables, object storage, visual search...
 
 ---
+
 - [The Bridge](https://bridge.haverford.edu)
 
 **Description**
@@ -36,6 +40,7 @@ Many of our projects share functionality.  Feel free to take features or ideas f
 > javascript interfaces, autocomplete 
 
 ---
+
 - The Quaker Necrology Project 
 
 **Description**
