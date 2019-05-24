@@ -22,7 +22,8 @@ Many of our projects share functionality.  Feel free to take features or ideas f
 
 ---
 
-- [Ticha](https://ticha.haverford.edu)
+- [Ticha](https://ticha.haverford.edu) 
+
 **Description**
 > This is a post-custodial...
 
