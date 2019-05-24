@@ -16,6 +16,8 @@ A showcase of our favorite 3rd party apps and how we use them.
 
 - [CKEditor](https://github.com/django-ckeditor/django-ckeditor): Adds a very nice richtext model field that can handle text formatting (bold, italic and so on).  We use it together with Django's native flat-pages app to create an interface where users can easily add content to a project, including text, images and other HTML elements, from the admin panel. 
 
+- [Google Map Widget](https://github.com/erdem/django-map-widgets)
+
 - [Autocomplete-light](https://github.com/yourlabs/django-autocomplete-light): Lets you easily add autocomplete fields to front-facing forms.  Note that autocomplete_fields is a built-in option in Django 2.0+, but only works in admin.  
 ```python
 class ChoiceAdmin(admin.ModelAdmin):
