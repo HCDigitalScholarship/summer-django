@@ -15,8 +15,8 @@ function processData(allRows) {
 
 	for (var i=0; i<allRows.length; i++) {
 		row = allRows[i];
-		x.push( row['department'] );
-		y.push( row['count'] );
+		x.push( row['title'] );
+		y.push( row['count(title)'] );
 	}
 	// console.log( 'X',x, 'Y',y, 'SD',standard_deviation );
 	makePlotly( x, y, standard_deviation );
@@ -30,7 +30,7 @@ function makePlotly( x, y, standard_deviation ){
 	}];
 
 	Plotly.newPlot('myDiv', traces, 
-		{title: 'Number of Classes offered in Fall 2019 by Department'});
+		{title: 'Latin titles by count in the Bridge'});
 };
   makeplot();  
   </script>
